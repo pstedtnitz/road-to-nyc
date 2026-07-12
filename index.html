@@ -61,6 +61,8 @@
   .tlight .lamp.red-off{background:#3a2426;}
   .tlight .lamp.yel-off{background:#3a3524;}
   .tlight .lamp.grn-on{background:var(--green);box-shadow:0 0 12px 3px rgba(48,209,88,0.55);}
+  .tlight .lamp.grn-off{background:#243a26;}
+  .tlight .lamp.yel-on{background:var(--yellow);box-shadow:0 0 12px 3px rgba(255,214,10,0.5);}
   .sess{font-size:14.5px;font-weight:650;}
   .det{font-size:12.5px;color:var(--ink2);}
   .why{font-size:12px;color:var(--muted);margin-top:7px;border-top:1px solid var(--grid);padding-top:7px;}
@@ -148,7 +150,9 @@
   body:not(.js) .wkbody{display:block;} .wkbody{display:none;padding:6px 10px;background:#161617;}
   .wk.open .wkbody{display:block;}
   .footer{color:var(--muted);font-size:10.5px;margin-top:14px;text-align:center;}
-  
+  .page{display:none;}
+  .page.on{display:block;}
+
   #tip{position:fixed;pointer-events:none;background:rgba(44,44,46,0.97);color:var(--ink);font-size:11px;padding:7px 10px;border-radius:9px;opacity:0;transition:opacity .1s;z-index:99;max-width:250px;border:1px solid var(--border);box-shadow:0 6px 22px rgba(0,0,0,0.5);line-height:1.5;}
   #tip .tt{color:var(--muted);}
 
@@ -167,6 +171,7 @@
     table{font-size:11px;}
   }
 </style>
+<noscript><style>.page{display:block!important;} .nav,.mobilenav{display:none!important;}</style></noscript>
 </head>
 <body class="">
 <div id="tip"></div>
@@ -176,7 +181,7 @@
     <button class="navbtn on" data-p="p-over"><span class="ic">📊</span>Overview</button>
     <button class="navbtn" data-p="p-plan"><span class="ic">🗓️</span>Trainingsplan</button>
     <button class="navbtn" data-p="p-ana"><span class="ic">📈</span>Analysen</button>
-    <div class="navfoot">v3 · Stand Sa, 11.07.2026<br>Auto-Update 9:30 &amp; 21:00</div>
+    <div class="navfoot">v3 · Stand So, 12.07.2026<br>Auto-Update 9:30 &amp; 21:00</div>
   </nav>
   <div class="main">
     <div class="mobilenav">
@@ -188,14 +193,14 @@
     <!-- ============ OVERVIEW ============ -->
     <div class="page on" id="p-over">
       <header>
-        <h1>Overview</h1><span class="sub">Sa, 11.07.2026</span>
+        <h1>Overview</h1><span class="sub">So, 12.07.2026</span>
         
       </header>
 
       <div class="grid kpis">
-        <div class="card kpi"><div class="label">Europalauf HM</div><div class="value">29<span class="unit"> Tage</span></div><div class="delta">So, 09.08. · Start 9:00 Uhr</div></div>
-        <div class="card kpi"><div class="label">Bremen (B)</div><div class="value">64<span class="unit"> Tage</span></div><div class="delta">So, 13.09. · Start 9:30 Uhr</div></div>
-        <div class="card kpi"><div class="label">New York (A)</div><div class="value">113<span class="unit"> Tage</span></div><div class="delta">So, 01.11. · Start ab 9:10 Ortszeit</div></div>
+        <div class="card kpi"><div class="label">Europalauf HM</div><div class="value">28<span class="unit"> Tage</span></div><div class="delta">So, 09.08. · Start 9:00 Uhr</div></div>
+        <div class="card kpi"><div class="label">Bremen (B)</div><div class="value">63<span class="unit"> Tage</span></div><div class="delta">So, 13.09. · Start 9:30 Uhr</div></div>
+        <div class="card kpi"><div class="label">New York (A)</div><div class="value">112<span class="unit"> Tage</span></div><div class="delta">So, 01.11. · Start ab 9:10 Ortszeit</div></div>
         <div class="card kpi"><div class="label">Woche · W1</div>
           <div class="gaugewrap"><svg width="46" height="46" id="g1"><circle cx="23" cy="23" r="18" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
  <circle cx="23" cy="23" r="18" fill="none" stroke="#0a84ff" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="113.09733552923255" stroke-dashoffset="16.964600329384886" transform="rotate(-90 23 23)"></circle>
@@ -205,35 +210,35 @@
           <div class="gaugewrap"><svg width="46" height="46" id="g2"><circle cx="23" cy="23" r="18" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
  <circle cx="23" cy="23" r="18" fill="none" stroke="#0a84ff" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="113.09733552923255" stroke-dashoffset="70.12034802812418" transform="rotate(-90 23 23)"></circle>
  <text x="23" y="27" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">38%</text></svg><div><div class="value" style="font-size:28px;">124<span class="unit"> / 330</span></div>
-          <div class="ontrack"><span class="d" style="background:var(--green)"></span><span style="color:var(--green)">Soll heute 117 · +7 km</span></div></div></div>
+          <div class="ontrack"><span class="d" style="background:var(--yellow)"></span><span style="color:var(--yellow)">Soll heute 128 · −4 km</span></div></div></div>
         </div>
       </div>
 
       <div class="grid vitals" style="margin-top:10px;">
-        <div class="vital"><svg width="56" height="56" class="vr" data-v="87" data-max="100" data-c="#30d158" data-icon="bolt" viewBox="0 0 56 56"><circle cx="28" cy="28" r="22" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
+        <div class="vital"><svg width="56" height="56" class="vr" data-v="59" data-max="100" data-c="#ffd60a" data-icon="bolt" viewBox="0 0 56 56"><circle cx="28" cy="28" r="22" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
  <circle cx="28" cy="28" r="22" fill="none" stroke="#30d158" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="138.23007675795088" stroke-dashoffset="17.969909978533614" transform="rotate(-90 28 28)"></circle>
- <path d="M30 17 L23 30 h6 l-2 11 8-13 h-6 z" fill="#30d158"></path></svg><div><div class="vval">87<span class="vunit"> %</span></div><div class="vlab">Recovery</div><div class="vavg">7T 57 · 30T 65</div></div></div>
+ <path d="M30 17 L23 30 h6 l-2 11 8-13 h-6 z" fill="#30d158"></path></svg><div><div class="vval">59<span class="vunit"> %</span></div><div class="vlab">Recovery</div><div class="vavg">7T 55 · 30T 64</div></div></div>
         <div class="vital"><svg width="56" height="56" class="vr" data-v="100" data-max="100" data-c="#30d158" data-icon="moon" viewBox="0 0 56 56"><circle cx="28" cy="28" r="22" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
  <circle cx="28" cy="28" r="22" fill="none" stroke="#30d158" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="138.23007675795088" stroke-dashoffset="0" transform="rotate(-90 28 28)"></circle>
- <path d="M33 18 a10.5 10.5 0 1 0 6 18 a8.5 8.5 0 0 1 -6 -18 z" fill="#30d158"></path></svg><div><div class="vval">100<span class="vunit"> %</span></div><div class="vlab">Sleep</div><div class="vavg">7T 96 · 30T 89</div></div></div>
-        <div class="vital"><svg width="56" height="56" class="vr" data-v="15.7" data-max="21" data-c="#0a84ff" data-icon="flame" viewBox="0 0 56 56"><circle cx="28" cy="28" r="22" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
+ <path d="M33 18 a10.5 10.5 0 1 0 6 18 a8.5 8.5 0 0 1 -6 -18 z" fill="#30d158"></path></svg><div><div class="vval">78<span class="vunit"> %</span></div><div class="vlab">Sleep</div><div class="vavg">7T 94 · 30T 89</div></div></div>
+        <div class="vital"><svg width="56" height="56" class="vr" data-v="1.6" data-max="21" data-c="#0a84ff" data-icon="flame" viewBox="0 0 56 56"><circle cx="28" cy="28" r="22" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
  <circle cx="28" cy="28" r="22" fill="none" stroke="#0a84ff" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="138.23007675795088" stroke-dashoffset="34.88663841986379" transform="rotate(-90 28 28)"></circle>
- <path d="M28 40 c-4-2-6-6-4-10 c1-2 3-4 3-7 c3 2 4 4 4 6 c2-1 3-3 3-5 c4 4 6 9 3 13 c-2 3-6 5-9 3 z" fill="#0a84ff"></path></svg><div><div class="vval">15,7<span class="vunit"> / 21</span></div><div class="vlab">Strain</div><div class="vavg">7T 14,1 · 30T 13,1</div></div></div>
+ <path d="M28 40 c-4-2-6-6-4-10 c1-2 3-4 3-7 c3 2 4 4 4 6 c2-1 3-3 3-5 c4 4 6 9 3 13 c-2 3-6 5-9 3 z" fill="#0a84ff"></path></svg><div><div class="vval">1,6<span class="vunit"> / 21</span></div><div class="vlab">Strain</div><div class="vavg">7T 13,0 · 30T 13,0</div></div></div>
         <div class="vital"><svg width="56" height="56" class="vr" data-v="82" data-max="100" data-c="#0a84ff" data-icon="pulse" viewBox="0 0 56 56"><circle cx="28" cy="28" r="22" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
  <circle cx="28" cy="28" r="22" fill="none" stroke="#0a84ff" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="138.23007675795088" stroke-dashoffset="24.881413816431166" transform="rotate(-90 28 28)"></circle>
- <path d="M18 29 h6 l3-7 4 14 3-7 h8" fill="none" stroke="#0a84ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg><div><div class="vval">82<span class="vunit"> ms</span></div><div class="vlab">HRV</div><div class="vavg">7T 72 · 30T 79</div></div></div>
+ <path d="M18 29 h6 l3-7 4 14 3-7 h8" fill="none" stroke="#0a84ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg><div><div class="vval">71<span class="vunit"> ms</span></div><div class="vlab">HRV</div><div class="vavg">7T 72 · 30T 78</div></div></div>
         <div class="vital"><svg width="56" height="56" class="vr" data-v="41" data-max="60" data-c="#0a84ff" data-icon="heart" data-inv="1" viewBox="0 0 56 56"><circle cx="28" cy="28" r="22" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
  <circle cx="28" cy="28" r="22" fill="none" stroke="#0a84ff" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="138.23007675795088" stroke-dashoffset="94.4572191179331" transform="rotate(-90 28 28)"></circle>
- <path d="M28 39 c-6-4.5-9-8-9-11.5 c0-3 2.3-5 5-5 c1.8 0 3.2 0.9 4 2.4 c0.8-1.5 2.2-2.4 4-2.4 c2.7 0 5 2 5 5 c0 3.5-3 7-9 11.5 z" fill="#0a84ff"></path></svg><div><div class="vval">41<span class="vunit"> bpm</span></div><div class="vlab">RHR</div><div class="vavg">7T 42 · 30T 42</div></div></div>
+ <path d="M28 39 c-6-4.5-9-8-9-11.5 c0-3 2.3-5 5-5 c1.8 0 3.2 0.9 4 2.4 c0.8-1.5 2.2-2.4 4-2.4 c2.7 0 5 2 5 5 c0 3.5-3 7-9 11.5 z" fill="#0a84ff"></path></svg><div><div class="vval">45<span class="vunit"> bpm</span></div><div class="vlab">RHR</div><div class="vavg">7T 42 · 30T 42</div></div></div>
       </div>
 
-      <div class="card ampelcard" style="margin-top:10px;">
-        <div class="tlight"><div class="lamp grn-on"></div><div class="lamp yel-off"></div><div class="lamp red-off"></div></div>
+      <div class="card ampelcard" style="margin-top:10px;border-left-color:var(--yellow);">
+        <div class="tlight"><div class="lamp grn-off"></div><div class="lamp yel-on"></div><div class="lamp red-off"></div></div>
         <div style="flex:1;">
-          <h2 style="margin-bottom:4px;">Heute · Sa, 11.07. <span style="color:var(--green);text-transform:none;letter-spacing:0;">· Ampel grün (87 %)</span></h2>
-          <div class="sess">Long Run — absolviert: 19,0 km @ 5:23 (hitzebedingt von 22 km gekürzt) ✓</div>
-          <div class="det">Ø HF 142 (Deckel &lt;145 ✓) · Strain 15,7 · progressiver Finish bei 28 °C bewusst gestrichen</div>
-          <div class="why"><b>Begründung Ampel:</b> HRV 82 ms (oberer Normalbereich), RHR 41 (Wochentief), Schlaf 100 %. Abbruch bei km 19 korrekt: Strain-Deckel vor Folgetag gewahrt. <b>Morgen:</b> Recovery 8 km, früh &amp; schattig. <b>Neue Regel:</b> Long Runs bei &gt;24 °C nur vor 10 Uhr.</div>
+          <h2 style="margin-bottom:4px;">Heute · So, 12.07. <span style="color:var(--yellow);text-transform:none;letter-spacing:0;">· Ampel gelb (59 %)</span></h2>
+          <div class="sess">Recovery-Lauf (heute Abend): 8 km @ 5:45–6:15, HF &lt; 135 · ganz locker</div>
+          <div class="det">Bewusst langsam – die Erholung ist heute der Trainingsinhalt. Elektrolyte auffüllen (Krampf-Historie).</div>
+          <div class="why"><b>Begründung Ampel gelb:</b> Recovery 59 % nach Hitze-Long-Run (Strain 15,7) + kurzer, unruhiger Nacht (Schlaf 78 %, Konsistenz 52 %). RHR leicht erhöht (45). Kein Qualitätsreiz heute – Recovery-Lauf passt exakt zur gelben Ampel. <b>Morgen:</b> Recovery 10 km. <b>Regel:</b> Long Runs bei &gt;24 °C nur vor 10 Uhr.</div>
         </div>
       </div>
 
@@ -1142,8 +1147,8 @@ const days=[
  {d:"Mi",dt:"08.07.",t:"E",tl:"EASY",done:1,txt:"12,0 km @ 5:35 · HF 133 · Strain 12,0"},
  {d:"Do",dt:"09.07.",t:"K",tl:"DOUBLE",done:1,txt:"20,8 km · LT1 5×6' (90″) @ 4:24, HF 147 + LT2 6×1k (60″) @ 3:57, HF 158 · Strain 16,2"},
  {d:"Fr",dt:"10.07.",t:"R",tl:"REST",done:1,txt:"Ruhetag · Strain 4,0"},
- {d:"Sa",dt:"11.07.",t:"L",tl:"LONG",done:1,today:1,txt:"19,0 km @ 5:23 · HF 142 · Strain 15,7 (Hitze-Cut von 22 km – korrekt)"},
- {d:"So",dt:"12.07.",t:"E",tl:"EASY",txt:"Recovery 8 km @ 5:45–6:15 · früh & schattig"},
+ {d:"Sa",dt:"11.07.",t:"L",tl:"LONG",done:1,txt:"19,0 km @ 5:23 · HF 142 · Strain 15,7 (Hitze-Cut von 22 km – korrekt)"},
+ {d:"So",dt:"12.07.",t:"E",tl:"EASY",today:1,txt:"HEUTE: Recovery 8 km @ 5:45–6:15, HF < 135 (heute Abend)"},
 ];
 $("days").innerHTML=days.map(x=>`
  <div class="dayrow ${x.done?'done':''} ${x.today&&!x.done?'today-hl':''}">
@@ -1207,8 +1212,8 @@ const cal=[
  {d:8,t:"E",run:"Easy 12 km @ 5:35 · HF 133",rec:48,hrv:69,rhr:43,sl:98,st:12.0},
  {d:9,t:"K",run:"Double: LT1+LT2 · 20,8 km",rec:54,hrv:72,rhr:42,sl:100,st:16.2,splits:"AM LT1 5×6' (90″): 4:28·4:24·4:24·4:23·4:21 (HF 147) · PM LT2 6×1k (60″): 3:58·3:57·3:57·4:00·3:55·3:56 (HF 158)"},
  {d:10,t:"R",run:"Ruhetag",rec:46,hrv:65,rhr:44,sl:97,st:4.0},
- {d:11,t:"L",run:"Long Run 19,0 km @ 5:23 · HF 142 (Hitze-Cut)",rec:87,hrv:82,rhr:41,sl:100,st:15.7,today:1,splits:"km-Splits: 5:16·5:05·5:08·5:10·5:07·5:16·5:17·5:12·5:21·5:16·5:10·5:24·5:14·5:34·5:23·5:19·5:34·5:45·6:31 — HF-Drift ab km 12 (Hitze), Deckel gehalten"},
- {d:12,t:"E",plan:"Recovery 8 km"},{d:13,t:"E",plan:"Recovery 10 km"},
+ {d:11,t:"L",run:"Long Run 19,0 km @ 5:23 · HF 142 (Hitze-Cut)",rec:87,hrv:82,rhr:41,sl:100,st:15.7,splits:"km-Splits: 5:16·5:05·5:08·5:10·5:07·5:16·5:17·5:12·5:21·5:16·5:10·5:24·5:14·5:34·5:23·5:19·5:34·5:45·6:31 — HF-Drift ab km 12 (Hitze), Deckel gehalten"},
+ {d:12,t:"E",run:"Recovery 8 km (heute Abend geplant)",rec:59,hrv:71,rhr:45,sl:78,st:1.6,today:1},{d:13,t:"E",plan:"Recovery 10 km"},
  {d:14,t:"G",plan:"Gym (kein Lauf)"},{d:15,t:"E",plan:"Easy 12 km + Strides"},
  {d:16,t:"K",plan:"Double: LT1 5×6' (90″) + LT2 6×1k (60″)"},{d:17,t:"E",plan:"Easy 10 km + Strides (Carbon)"},{d:18,t:"R",plan:"Ruhetag"},
  {d:19,t:"K",plan:"MP-Block 3×4 km @ 4:18–4:25"},{d:20,t:"E",plan:"Recovery 8 km"},{d:21,t:"G",plan:"Gym (kein Lauf)"},
@@ -1221,7 +1226,7 @@ const fcol={E:"var(--t-easy)",K:"var(--t-key)",L:"var(--t-long)",T:"var(--t-test
 const tname={E:"Easy",K:"Key",L:"Long",T:"Test",RC:"Race",G:"Gym",R:"Rest"};
 let ch=["Mo","Di","Mi","Do","Fr","Sa","So"].map(h=>`<div class="h">${h}</div>`).join("")+`<div class="cd empty"></div><div class="cd empty"></div>`;
 cal.forEach(c=>{
- const future=c.d>11,cls=`cd ${future?'future':''} ${c.today?'todaycell':''}`;
+ const future=c.d>12,cls=`cd ${future?'future':''} ${c.today?'todaycell':''}`;
  const style=future?``:`background:${fcol[c.t]};color:#fff;`;
  const tipHtml=future?`<b>${c.d}.07. · ${tname[c.t]}</b><br><span class="tt">Plan:</span> ${c.plan}`
   :`<b>${c.d}.07. · ${tname[c.t]}</b><br>${c.run}<br><span class="tt">Rec</span> ${c.rec} % · <span class="tt">HRV</span> ${c.hrv} · <span class="tt">RHR</span> ${c.rhr} · <span class="tt">Sleep</span> ${c.sl} %${c.st!=null?` · <span class="tt">Strain</span> ${c.st.toFixed(1)}`:""}`;
