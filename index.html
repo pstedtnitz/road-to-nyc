@@ -123,6 +123,8 @@
   .cbox{width:18px;height:18px;border-radius:5px;border:2px solid var(--muted);flex-shrink:0;}
   .check .ct{font-size:13px;font-weight:650;}
   .check .cs{font-size:11px;color:var(--muted);}
+  .cbox.on{background:var(--green);border-color:var(--green);}
+  .cbox.on::after{content:"✓";color:#04140a;font-size:13px;font-weight:900;line-height:14px;display:block;text-align:center;}
   /* Milestone timeline */
   .mtl{position:relative;height:104px;margin-top:6px;}
   .mtl .track2{position:absolute;top:46px;left:0;right:0;height:5px;border-radius:3px;background:linear-gradient(90deg,var(--card3),var(--card2));}
@@ -181,6 +183,7 @@
     <button class="navbtn on" data-p="p-over"><span class="ic">📊</span>Overview</button>
     <button class="navbtn" data-p="p-plan"><span class="ic">🗓️</span>Trainingsplan</button>
     <button class="navbtn" data-p="p-ana"><span class="ic">📈</span>Analysen</button>
+    <button class="navbtn" data-p="p-goals"><span class="ic">🎯</span>Ziele</button>
     <div class="navfoot">v3 · Stand Mo, 13.07.2026<br>Auto-Update 9:30 &amp; 21:00</div>
   </nav>
   <div class="main">
@@ -188,6 +191,7 @@
       <button class="navbtn on" data-p="p-over">📊 Overview</button>
       <button class="navbtn" data-p="p-plan">🗓️ Plan</button>
       <button class="navbtn" data-p="p-ana">📈 Analysen</button>
+      <button class="navbtn" data-p="p-goals">🎯 Ziele</button>
     </div>
 
     <!-- ============ OVERVIEW ============ -->
@@ -373,10 +377,10 @@
     <span class="tpill tp-L">LONG</span>
     <div class="dinfo">✓ Long Run 19 km @ 5:23 (Hitze-Cut) · Strain 15,7</div>
    </div>
-   <div class="dayrow ">
+   <div class="dayrow done">
     <div class="dd" style="min-width:74px;">So 12.07.</div>
-    <span class="tpill tp-E">EASY</span>
-    <div class="dinfo">Recovery 8 km @ 5:45–6:15</div>
+    <span class="tpill tp-R">REST</span>
+    <div class="dinfo"><span style="text-decoration:line-through;color:var(--muted)">Recovery 8 km</span> · ✗ bewusst geskippt (8 h Autofahrt, wenig Schlaf)</div>
    </div>
   </div>
  </div>
@@ -1027,6 +1031,29 @@
       <header><h1>Analysen</h1><span class="sub">Korrelationen · Prognosen · Fortschritt</span></header>
 
       <div class="card" style="margin-top:12px;">
+        <h2>Aerobes Decoupling — Durability <span style="text-transform:none;letter-spacing:0;">(Pace-zu-Puls: 1. vs. 2. Hälfte)</span></h2>
+        <svg viewBox="0 0 960 240" width="100%"><line x1="44" x2="950" y1="169.33333333333334" y2="169.33333333333334" stroke="#2c2c2e"/><text x="38" y="172.33333333333334" text-anchor="end" font-size="9.5" fill="#8e8e93">0%</text><line x1="44" x2="950" y1="138.66666666666669" y2="138.66666666666669" stroke="#2c2c2e"/><text x="38" y="141.66666666666669" text-anchor="end" font-size="9.5" fill="#8e8e93">2%</text><line x1="44" x2="950" y1="108.0" y2="108.0" stroke="#2c2c2e"/><text x="38" y="111.0" text-anchor="end" font-size="9.5" fill="#8e8e93">4%</text><line x1="44" x2="950" y1="77.33333333333334" y2="77.33333333333334" stroke="#2c2c2e"/><text x="38" y="80.33333333333334" text-anchor="end" font-size="9.5" fill="#8e8e93">6%</text><line x1="44" x2="950" y1="46.66666666666666" y2="46.66666666666666" stroke="#2c2c2e"/><text x="38" y="49.66666666666666" text-anchor="end" font-size="9.5" fill="#8e8e93">8%</text><rect x="44" y="92.66666666666666" width="906" height="107.33333333333334" fill="rgba(40,177,76,0.07)"/><line x1="44" x2="950" y1="92.66666666666666" y2="92.66666666666666" stroke="#28b14c" stroke-dasharray="5 3" opacity="0.7"/><text x="948" y="87.66666666666666" text-anchor="end" font-size="9" fill="#28b14c">Ziel &lt; 5 % (durabel)</text><polyline points="44.0,177.0 487.0,117.2 930.0,65.06666666666666" fill="none" stroke="#5a6b7a" stroke-width="1.5"/><circle cx="44.0" cy="177.0" r="5.5" fill="#28b14c" stroke="#1c1c1e" stroke-width="1.5"/><text x="44.0" y="167.0" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">-0.5%</text><text x="44.0" y="224" text-anchor="middle" font-size="9.5" fill="#8e8e93">14.06</text><text x="44.0" y="236" text-anchor="middle" font-size="8.5" fill="#6d6d72">26 km @5:38</text><circle cx="487.0" cy="117.2" r="5.5" fill="#28b14c" stroke="#1c1c1e" stroke-width="1.5"/><text x="487.0" y="107.2" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">+3.4%</text><text x="487.0" y="224" text-anchor="middle" font-size="9.5" fill="#8e8e93">05.07</text><text x="487.0" y="236" text-anchor="middle" font-size="8.5" fill="#6d6d72">30 km @5:05</text><circle cx="930.0" cy="65.06666666666666" r="5.5" fill="#ff453a" stroke="#1c1c1e" stroke-width="1.5"/><text x="930.0" y="55.06666666666666" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">+6.8%</text><text x="930.0" y="224" text-anchor="middle" font-size="9.5" fill="#8e8e93">11.07</text><text x="930.0" y="236" text-anchor="middle" font-size="8.5" fill="#6d6d72">19 km · Hitze</text></svg>
+        <div class="insight" style="margin-top:4px;">Misst genau deine Baustelle: Läuft die 2. Hälfte bei gleichem Puls stark langsamer, fehlt Ermüdungsresistenz. <b style="color:var(--ink2)">Dein Bild ist stark:</b> bei Easy-Pace nahezu 0 % (26er: −0,5 %), bei 30 km @5:05 nur +3,4 % (2. Hälfte sogar schneller). Die +6,8 % im 19er sind reiner Hitze-Effekt (28 °C), kein Ausdauerdefizit.</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:8px;border-top:1px solid var(--grid);padding-top:7px;line-height:1.5;"><b style="color:var(--ink2)">Was zeigt der Chart?</b> Für jeden langen Lauf teilen wir die Strecke in zwei Hälften und vergleichen, wie viel Tempo pro Herzschlag jeweils herauskommt. Bleibt die zweite Hälfte gleich effizient, ist der Wert nahe 0 % – der Körper „hält". Wird die zweite Hälfte bei gleichem Puls deutlich langsamer, steigt der Wert (Herzfrequenz-Drift). Unter 5 % gilt als „durabel" – ein gutes Zeichen, dass die Ausdauer über die Distanz trägt. Je niedriger und flacher die Kurve über die Wochen, desto marathonfester.</div>
+      </div>
+
+      <div class="grid cols-2">
+        <div class="card">
+          <h2>Trainingslast · ACWR <span style="text-transform:none;letter-spacing:0;">(Belastungssteuerung)</span></h2>
+          <svg viewBox="0 0 460 96" width="100%"><rect x="30.0" y="44" width="82.80000000000001" height="20" fill="#48484a" opacity="0.8"/><rect x="112.80000000000001" y="44" width="137.99999999999997" height="20" fill="#28b14c" opacity="0.8"/><rect x="250.79999999999998" y="44" width="55.20000000000002" height="20" fill="#b28f00" opacity="0.8"/><rect x="306.0" y="44" width="138.0" height="20" fill="#ff453a" opacity="0.8"/><line x1="112.80000000000001" x2="112.80000000000001" y1="42" y2="66" stroke="#1c1c1e" stroke-width="1.5"/><text x="112.80000000000001" y="78" text-anchor="middle" font-size="8.5" fill="#8e8e93">0,8</text><line x1="250.79999999999998" x2="250.79999999999998" y1="42" y2="66" stroke="#1c1c1e" stroke-width="1.5"/><text x="250.79999999999998" y="78" text-anchor="middle" font-size="8.5" fill="#8e8e93">1,3</text><line x1="306.0" x2="306.0" y1="42" y2="66" stroke="#1c1c1e" stroke-width="1.5"/><text x="306.0" y="78" text-anchor="middle" font-size="8.5" fill="#8e8e93">1,5</text><text x="71.4" y="38" text-anchor="middle" font-size="8.5" fill="#8e8e93">Detraining</text><text x="181.8" y="38" text-anchor="middle" font-size="8.5" fill="#30d158" font-weight="700">Optimal</text><text x="375.0" y="38" text-anchor="middle" font-size="8.5" fill="#ff453a">Risiko</text><polygon points="206.15999999999997,30 218.15999999999997,30 212.15999999999997,42" fill="#fff"/><text x="212.15999999999997" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">1,16</text><circle cx="110.04" cy="88" r="3.5" fill="#0a84ff"/><circle cx="220.44" cy="88" r="3.5" fill="#0a84ff"/><circle cx="212.15999999999997" cy="88" r="3.5" fill="#0a84ff"/><text x="30" y="90" font-size="8" fill="#8e8e93">Verlauf:</text></svg>
+          <div class="insight" style="margin-top:4px;"><b style="color:var(--ink2)">Aktuell 1,16 – grüner Optimalbereich.</b> Nach dem Volumensprung sauber austariert, kein Verletzungsrisiko-Signal.</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:8px;border-top:1px solid var(--grid);padding-top:7px;line-height:1.5;"><b style="color:var(--ink2)">Was bedeutet ACWR?</b> „Acute:Chronic Workload Ratio" – das Verhältnis deiner Last der letzten 7 Tage (akut) zum Schnitt der letzten 28 Tage (chronisch), hier auf Basis der Wochenkilometer. Wert um 1,0 heißt: du trainierst so viel wie dein Körper gewohnt ist. 0,8–1,3 ist der sichere Aufbaubereich; über 1,5 steigt das Verletzungsrisiko stark, weil die Belastung schneller wächst als die Anpassung. Der Klassiker-Fehler „zu schnell zu viel" wird hier früh sichtbar.</div>
+        </div>
+        <div class="card">
+          <h2>Intensitätsverteilung <span style="text-transform:none;letter-spacing:0;">(Laufzeit in HR-Zonen)</span></h2>
+          <svg viewBox="0 0 460 152" width="100%"><text x="0" y="23" font-size="8.5" fill="#aeaeb2">15.–21.06</text><rect x="112" y="8" width="72.42" height="22" fill="#0a84ff" rx="2"/><text x="148.96" y="23" text-anchor="middle" font-size="8.5" font-weight="700" fill="#000">24</text><rect x="185.92000000000002" y="8" width="223.34" height="22" fill="#ffd60a" rx="2"/><text x="298.34000000000003" y="23" text-anchor="middle" font-size="8.5" font-weight="700" fill="#000">73</text><rect x="410.76" y="8" width="7.74" height="22" fill="#ff453a" rx="2"/><text x="0" y="57" font-size="8.5" fill="#aeaeb2">22.–28.06</text><rect x="112" y="42" width="174.06" height="22" fill="#0a84ff" rx="2"/><text x="199.78" y="57" text-anchor="middle" font-size="8.5" font-weight="700" fill="#000">57</text><rect x="287.56" y="42" width="103.22" height="22" fill="#ffd60a" rx="2"/><text x="339.92" y="57" text-anchor="middle" font-size="8.5" font-weight="700" fill="#000">34</text><rect x="392.28" y="42" width="23.14" height="22" fill="#ff453a" rx="2"/><text x="404.59999999999997" y="57" text-anchor="middle" font-size="8.5" font-weight="700" fill="#000">8</text><text x="0" y="91" font-size="8.5" fill="#aeaeb2">29.06–05.07</text><rect x="112" y="76" width="235.66" height="22" fill="#0a84ff" rx="2"/><text x="230.57999999999998" y="91" text-anchor="middle" font-size="8.5" font-weight="700" fill="#000">77</text><rect x="349.15999999999997" y="76" width="66.26" height="22" fill="#ffd60a" rx="2"/><text x="383.03999999999996" y="91" text-anchor="middle" font-size="8.5" font-weight="700" fill="#000">22</text><rect x="416.91999999999996" y="76" width="1.58" height="22" fill="#ff453a" rx="2"/><text x="0" y="125" font-size="8.5" fill="#aeaeb2">06.–12.07</text><rect x="112" y="110" width="266.46" height="22" fill="#0a84ff" rx="2"/><text x="245.98" y="125" text-anchor="middle" font-size="8.5" font-weight="700" fill="#000">87</text><rect x="379.96" y="110" width="35.46" height="22" fill="#ffd60a" rx="2"/><text x="398.44" y="125" text-anchor="middle" font-size="8.5" font-weight="700" fill="#000">12</text><rect x="416.91999999999996" y="110" width="4.66" height="22" fill="#ff453a" rx="2"/><line x1="358.4" x2="358.4" y1="4" y2="144" stroke="#fff" stroke-dasharray="3 3" opacity="0.6"/><text x="358.4" y="151" text-anchor="middle" font-size="7.5" fill="#8e8e93">80%-Ziel</text></svg>
+          <div class="legend" style="margin-top:2px;"><span><span class="sw" style="background:#0a84ff"></span>Easy (Z0–2)</span><span><span class="sw" style="background:#ffd60a"></span>Moderat (Z3)</span><span><span class="sw" style="background:#ff453a"></span>Hart (Z4–5)</span></div>
+          <div class="insight" style="margin-top:4px;">Ziel ~80 % easy, wenig „Graubereich" (Z3). <b style="color:var(--ink2)">Klarer Fortschritt:</b> vom Urlaub (24 % easy, 73 % Z3 durch Hügel/Hitze) auf zuletzt 87 % easy / 12 % Z3 – jetzt lehrbuchmäßig polarisiert.</div>
+        </div>
+      </div>
+
+
+      <div class="card" style="margin-top:12px;">
         <h2>Strain (Vortag) → Recovery (Folgetag)</h2>
         <div class="chips" id="chips">
           <button class="chip on" data-f="all">All</button>
@@ -1072,8 +1099,7 @@
         </div>
       </div>
 
-      <div class="grid cols-2">
-        <div class="card">
+      <div class="card">
           <h2>Whoop-Langzeit-KPIs <span style="text-transform:none;letter-spacing:0;">(manuell · Age: So · VO2max: Di)</span></h2>
           <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:2px;gap:8px;">
             <div class="card" style="background:var(--card2);padding:10px 12px;"><div class="label" style="font-size:10px;color:var(--muted);text-transform:uppercase;">Whoop Age</div><div style="font-size:23px;font-weight:700;white-space:nowrap;">22,7 <span style="font-size:11px;color:var(--green);">−12,0 J.</span></div><div style="font-size:10px;color:var(--muted);">So, 12.07.</div></div>
@@ -1084,15 +1110,19 @@
           <div style="font-size:11.5px;color:var(--ink2);margin:6px 0 2px;">VO2max · Whoop vs. Garmin</div>
           <svg id="vo2t" viewBox="0 0 460 100" width="100%"><line x1="46" x2="452" y1="84" y2="84" stroke="#2c2c2e"></line><text x="41" y="87" text-anchor="end" font-size="8.5" fill="#8e8e93">55</text><line x1="46" x2="452" y1="52.285714285714285" y2="52.285714285714285" stroke="#2c2c2e"></line><text x="41" y="55.285714285714285" text-anchor="end" font-size="8.5" fill="#8e8e93">58</text><line x1="46" x2="452" y1="20.571428571428577" y2="20.571428571428577" stroke="#2c2c2e"></line><text x="41" y="23.571428571428577" text-anchor="end" font-size="8.5" fill="#8e8e93">61</text><text x="6" y="14" font-size="8.5" fill="#8e8e93">mL/kg/min</text><polyline points="46,31.142857142857142 114.8,41.714285714285715 183.6,31.142857142857142 252.4,41.714285714285715 321.2,31.142857142857142 390,41.714285714285715" fill="none" stroke="#0a84ff" stroke-width="2"></polyline><polyline points="46,54.400000000000034 114.8,52.285714285714285 183.6,52.285714285714285 252.4,63.914285714285725 321.2,59.68571428571431 390,62.85714285714286" fill="none" stroke="#d2740a" stroke-width="2"></polyline><circle cx="46" cy="31.142857142857142" r="3.5" fill="#0a84ff" stroke="#1c1c1e" stroke-width="1.2"></circle><circle cx="46" cy="54.400000000000034" r="3.5" fill="#d2740a" stroke="#1c1c1e" stroke-width="1.2"></circle><text x="46" y="96" text-anchor="middle" font-size="8.5" fill="#8e8e93">Feb</text><circle cx="114.8" cy="41.714285714285715" r="3.5" fill="#0a84ff" stroke="#1c1c1e" stroke-width="1.2"></circle><circle cx="114.8" cy="52.285714285714285" r="3.5" fill="#d2740a" stroke="#1c1c1e" stroke-width="1.2"></circle><text x="114.8" y="96" text-anchor="middle" font-size="8.5" fill="#8e8e93">Mär</text><circle cx="183.6" cy="31.142857142857142" r="3.5" fill="#0a84ff" stroke="#1c1c1e" stroke-width="1.2"></circle><circle cx="183.6" cy="52.285714285714285" r="3.5" fill="#d2740a" stroke="#1c1c1e" stroke-width="1.2"></circle><text x="183.6" y="96" text-anchor="middle" font-size="8.5" fill="#8e8e93">Apr</text><circle cx="252.4" cy="41.714285714285715" r="3.5" fill="#0a84ff" stroke="#1c1c1e" stroke-width="1.2"></circle><circle cx="252.4" cy="63.914285714285725" r="3.5" fill="#d2740a" stroke="#1c1c1e" stroke-width="1.2"></circle><text x="252.4" y="96" text-anchor="middle" font-size="8.5" fill="#8e8e93">Mai</text><circle cx="321.2" cy="31.142857142857142" r="3.5" fill="#0a84ff" stroke="#1c1c1e" stroke-width="1.2"></circle><circle cx="321.2" cy="59.68571428571431" r="3.5" fill="#d2740a" stroke="#1c1c1e" stroke-width="1.2"></circle><text x="321.2" y="96" text-anchor="middle" font-size="8.5" fill="#8e8e93">Jun</text><circle cx="390" cy="41.714285714285715" r="3.5" fill="#0a84ff" stroke="#1c1c1e" stroke-width="1.2"></circle><circle cx="390" cy="62.85714285714286" r="3.5" fill="#d2740a" stroke="#1c1c1e" stroke-width="1.2"></circle><text x="390" y="96" text-anchor="middle" font-size="8.5" fill="#8e8e93">Jul</text><text x="399" y="44.714285714285715" font-size="9.5" font-weight="700" fill="#0a84ff">Whoop 59</text><text x="399" y="65.85714285714286" font-size="9.5" font-weight="700" fill="#d2740a">Garmin 57</text></svg>
         </div>
-        <div class="card">
-          <h2>Ziele &amp; PB-Checkliste</h2>
-          <div class="check"><div class="cbox"></div><div><div class="ct">5 km Sub 20:00</div><div class="cs">PB 20:48 · Modelle: 18:55–20:45 · Checkpoint: 25.07.</div></div></div>
-          <div class="check"><div class="cbox"></div><div><div class="ct">10 km Sub 40:00</div><div class="cs">Bestwert 43:00 · Modelle: 40:04–43:01 · Checkpoint: Herbst 2026</div></div></div>
-          <div class="check"><div class="cbox"></div><div><div class="ct">HM Sub 1:35</div><div class="cs">PB 1:43:19 · Modelle: 1:28:37–1:35:19 · Checkpoint: 09.08.</div></div></div>
-          <div class="check"><div class="cbox"></div><div><div class="ct">Marathon Sub 3:00</div><div class="cs">Debüt · Modelle: 3:13:13–3:26:36 · Checkpoints: 13.09. / 01.11.</div></div></div>
-        </div>
-      </div>
       <div class="footer">Analysen aktualisieren sich mit jedem Auto-Update · Korrelation basiert auf 24 Tagen Whoop×Strava (17.06.–10.07.)</div>
+    </div>
+    <!-- ============ ZIELE ============ -->
+    <div class="page was-off" id="p-goals">
+      <header><h1>Ziele &amp; PB-Checkliste</h1><span class="sub">Zielzeiten · Häkchen erscheint automatisch, sobald im Wettkampf erreicht</span></header>
+      <div class="card" style="margin-top:12px;">
+        <h2>Saisonziele 2026</h2>
+        <div class="check" data-goal="1200" data-best="1248"><div class="cbox"></div><div><div class="ct">5 km Sub 20:00</div><div class="cs">PB 20:48 · Modelle: 18:55–20:45 · Checkpoint: 25.07.</div></div></div>
+        <div class="check" data-goal="2400" data-best="2580"><div class="cbox"></div><div><div class="ct">10 km Sub 40:00</div><div class="cs">Bestwert 43:00 · Modelle: 40:04–43:01 · Checkpoint: Herbst 2026</div></div></div>
+        <div class="check" data-goal="5700" data-best="6199"><div class="cbox"></div><div><div class="ct">HM Sub 1:35</div><div class="cs">PB 1:43:19 · Modelle: 1:28:37–1:35:19 · Checkpoint: 09.08.</div></div></div>
+        <div class="check" data-goal="10800" data-best="99999"><div class="cbox"></div><div><div class="ct">Marathon Sub 3:00</div><div class="cs">Debüt · Modelle: 3:13:13–3:26:36 · Checkpoints: 13.09. / 01.11.</div></div></div>
+        <div class="footer" style="margin-top:10px;">Wird bei jedem Auto-Update geprüft · Zielzeit erreicht → Häkchen wird automatisch grün</div>
+      </div>
     </div>
   </div>
 </div>
@@ -1291,7 +1321,7 @@ const P=[
   ["Mi 08.07.","E","✓ Easy 12 km @ 5:35 · HF 133 · Strain 12,0",1],
   ["Do 09.07.","K","✓ Double: LT1 5×6' (90″) @ 4:24 + LT2 6×1k (60″) @ 3:57 · Strain 16,2",1],
   ["Fr 10.07.","R","✓ Ruhetag · Strain 4,0",1],["Sa 11.07.","L","✓ Long Run 19 km @ 5:23 (Hitze-Cut) · Strain 15,7",1],
-  ["So 12.07.","E","Recovery 8 km @ 5:45–6:15",0]]},
+  ["So 12.07.","R","<span style='text-decoration:line-through;color:var(--muted)'>Recovery 8 km</span> · ✗ bewusst geskippt (8 h Autofahrt, wenig Schlaf)",1]]},
  {w:"W2",dr:"13.–19.07.",km:"~74 km",days:[
   ["Mo 13.07.","E","Recovery 10 km",0],["Di 14.07.","G","Gym – kein Lauf (einbeinig: Step-downs, SL-RDL, Nordic Curls)",0],
   ["Mi 15.07.","E","Easy 12 km + 6×20″ Strides",0],
@@ -1389,6 +1419,7 @@ $("planwrap").innerHTML=P.map((w,i)=>`
   </div>
  </div>`).join("");
 document.querySelectorAll(".wkhead").forEach(el=>el.onclick=()=>el.parentElement.classList.toggle("open"));
+document.querySelectorAll("#p-goals .check").forEach(c=>{ if(+c.dataset.best <= +c.dataset.goal) c.querySelector(".cbox").classList.add("on"); });
 
 /* ===== Analysen ===== */
 const pts=[
