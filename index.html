@@ -225,8 +225,8 @@
         <div class="card kpi"><div class="label">Juli</div>
           <div class="gaugewrap"><svg width="46" height="46" id="g2"><circle cx="23" cy="23" r="18" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
  <circle cx="23" cy="23" r="18" fill="none" stroke="#0a84ff" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="113.09733552923255" stroke-dashoffset="66.48752452324581" transform="rotate(-90 23 23)"></circle>
- <text x="23" y="27" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">41%</text></svg><div><div class="value" style="font-size:28px;">136<span class="unit"> / 330</span></div>
-          <div class="ontrack"><span class="d" style="background:var(--yellow)"></span><span style="color:var(--yellow)">Ist 136 · Rest-Plan ~175 km → Prognose ~311/330</span></div></div></div>
+ <text x="23" y="27" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">41%</text></svg><div><div class="value" style="font-size:28px;">136<span class="unit"> / 320</span></div>
+          <div class="ontrack"><span class="d" style="background:var(--green)"></span><span style="color:var(--green)">Ist 136 · Ziel 320 · Prognose ~320 (schrittweiser Aufbau)</span></div></div></div>
         </div>
       </div>
 
@@ -1191,7 +1191,7 @@ function gauge(el,pct,color,label){
  <text x="23" y="27" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">${label}</text>`;
 }
 gauge($("g1"),16,"#0a84ff","16%");
-gauge($("g2"),41,"#0a84ff","41%");
+gauge($("g2"),43,"#0a84ff","43%");
 
 /* Vitals rings */
 const ICONS={
@@ -1215,9 +1215,9 @@ document.querySelectorAll(".vr").forEach(el=>{
 const days=[
  {d:"Mo",dt:"13.07.",t:"E",tl:"EASY",done:1,txt:"12,0 km @ 5:08 · HF 138 · Strain 13,5"},
  {d:"Di",dt:"14.07.",t:"G",tl:"GYM",today:1,txt:"Gym – kein Lauf (einbeinig: Step-downs, SL-RDL, Nordic Curls)"},
- {d:"Mi",dt:"15.07.",t:"E",tl:"EASY",txt:"Easy 12 km + 6×20″ Strides"},
+ {d:"Mi",dt:"15.07.",t:"E",tl:"EASY",txt:"Easy 10 km locker (Vortag Double)"},
  {d:"Do",dt:"16.07.",t:"K",tl:"DOUBLE",txt:"AM LT1 5×6' (90″) @ 4:20–4:28 · PM LT2 6×1k (60″) @ 3:55–4:00"},
- {d:"Fr",dt:"17.07.",t:"E",tl:"EASY",txt:"Easy 10 km + 4 Strides (im Carbon – Eingewöhnung)"},
+ {d:"Fr",dt:"17.07.",t:"E",tl:"EASY",txt:"Easy 12 km + 4 Strides (im Carbon – Eingewöhnung)"},
  {d:"Sa",dt:"18.07.",t:"R",tl:"REST",txt:"Ruhetag (vor Long Run)"},
  {d:"So",dt:"19.07.",t:"K",tl:"MP-KEY",txt:"MP-Block 3×4 km @ 4:18–4:25 (1 km Float) · letzter Block im Carbon"},
 ];
@@ -1232,7 +1232,7 @@ $("days").innerHTML=days.map(x=>`
 const wData=[
  {l:"08–14.06",ist:78},{l:"15–21.06",ist:46},{l:"22–28.06",ist:27},
  {l:"29.06–05.07",ist:91},{l:"06–12.07",ist:61},{l:"13–19.07",ist:12,plan:74,cur:1},
- {l:"20–26.07",plan:59},{l:"27.07–02.08",plan:84},{l:"03–09.08",plan:66,race:"HM"},{l:"10–16.08",plan:57},
+ {l:"20–26.07",plan:62},{l:"27.07–02.08",plan:90},{l:"03–09.08",plan:66,race:"HM"},{l:"10–16.08",plan:57},
 ];
 const mData=[
  {l:"Jan",ist:115},{l:"Feb",ist:53},{l:"Mär",ist:29},{l:"Apr",ist:99},{l:"Mai",ist:133},
@@ -1297,13 +1297,13 @@ const calM=[
  {d:10,t:"R",run:"Ruhetag",rec:46,hrv:65,rhr:44,sl:97,st:4.0},
  {d:11,t:"L",run:"Long Run 19,0 km @ 5:23 · HF 142 (Hitze-Cut)",rec:87,hrv:82,rhr:41,sl:100,st:15.7,splits:"km-Splits: 5:16·5:05·5:08·5:10·5:07·5:16·5:17·5:12·5:21·5:16·5:10·5:24·5:14·5:34·5:23·5:19·5:34·5:45·6:31 — HF-Drift ab km 12 (Hitze), Deckel gehalten"},
  {d:12,t:"R",run:"Recovery-Lauf GESKIPPT (8 h Autofahrt, wenig Schlaf)",rec:59,hrv:71,rhr:45,sl:78,st:2.0},{d:13,t:"E",run:"Easy 12,0 km @ 5:08 · HF 138 (Ø) · geplant war Recovery 10 km",rec:95,hrv:90,rhr:40,sl:83,st:13.5},
- {d:14,t:"G",run:"Gym – kein Lauf (einbeinig)",rec:87,hrv:85,rhr:41,sl:90,st:0.2,today:1},{d:15,t:"E",plan:"Easy 12 km + Strides"},
- {d:16,t:"K",plan:"Double: LT1 5×6' (90″) + LT2 6×1k (60″)"},{d:17,t:"E",plan:"Easy 10 km + Strides (Carbon)"},{d:18,t:"R",plan:"Ruhetag"},
+ {d:14,t:"G",run:"Gym – kein Lauf (einbeinig)",rec:87,hrv:85,rhr:41,sl:90,st:0.2,today:1},{d:15,t:"E",plan:"Easy 10 km locker (Vortag Double)"},
+ {d:16,t:"K",plan:"Double: LT1 5×6' (90″) + LT2 6×1k (60″)"},{d:17,t:"E",plan:"Easy 12 km + Strides (Carbon)"},{d:18,t:"R",plan:"Ruhetag"},
  {d:19,t:"K",plan:"MP-Block 3×4 km @ 4:18–4:25"},{d:20,t:"V",plan:"Recovery 8 km"},{d:21,t:"G",plan:"Gym (kein Lauf)"},
- {d:22,t:"K",plan:"LT1 4×6' (90″) + 4×400 Sharpener"},{d:23,t:"E",plan:"Easy 8 km"},{d:24,t:"R",plan:"Ruhetag"},
+ {d:22,t:"K",plan:"LT1 4×6' (90″) + 4×400 Sharpener"},{d:23,t:"E",plan:"Easy 11 km"},{d:24,t:"R",plan:"Ruhetag"},
  {d:25,t:"T",plan:"5-KM-TEST all-out (Carbon)"},{d:26,t:"L",plan:"Long Run 21 km locker"},
- {d:27,t:"V",plan:"Recovery 8 km"},{d:28,t:"G",plan:"Gym (kein Lauf)"},{d:29,t:"E",plan:"Easy 12 km"},
- {d:30,t:"K",plan:"Double: LT1 3×10' (90″) + LT2 5×2k (90″)"},{d:31,t:"E",plan:"Easy 10 km + Strides"},
+ {d:27,t:"V",plan:"Recovery 8 km"},{d:28,t:"G",plan:"Gym (kein Lauf)"},{d:29,t:"E",plan:"Easy 15 km"},
+ {d:30,t:"K",plan:"Double: LT1 3×10' (90″) + LT2 5×2k (90″)"},{d:31,t:"E",plan:"Easy 13 km + Strides"},
  ]},
 ];
 let calIdx=calM.length-1;
@@ -1391,20 +1391,20 @@ const P=[
   ["So 12.07.","R","<span style='text-decoration:line-through;color:var(--muted)'>Recovery 8 km</span> · ✗ geskippt (8 h Autofahrt, wenig Schlaf) · Strain 2,0 (zählt in Ø)",1]]},
  {w:"W2",dr:"13.–19.07.",km:"~74 km",days:[
   ["Mo 13.07.","E","✓ Easy 12,0 km @ 5:08 · HF 138 · Strain 13,5",1],["Di 14.07.","G","Gym – kein Lauf (einbeinig: Step-downs, SL-RDL, Nordic Curls)",0],
-  ["Mi 15.07.","E","Easy 12 km + 6×20″ Strides",0],
+  ["Mi 15.07.","E","Easy 10 km locker (Vortag Double)",0],
   ["Do 16.07.","K","Double: AM LT1 5×6' (90″) @ 4:20–4:28 · PM LT2 6×1k (60″) @ 3:55–4:00",0],
-  ["Fr 17.07.","E","Easy 10 km + 4 Strides (im Carbon, Eingewöhnung)",0],["Sa 18.07.","R","Ruhetag",0],
+  ["Fr 17.07.","E","Easy 12 km + 4 Strides (im Carbon, Eingewöhnung)",0],["Sa 18.07.","R","Ruhetag",0],
   ["So 19.07.","K","MP-BLOCK 3×4 km @ 4:18–4:25 (1 km Float) · letzter Block im Carbon · Race-Fueling",0]]},
- {w:"W3",dr:"20.–26.07.",km:"~59 km · Testwoche",days:[
+ {w:"W3",dr:"20.–26.07.",km:"~62 km · Testwoche",days:[
   ["Mo 20.07.","V","Recovery 8 km",0],["Di 21.07.","G","Gym – kein Lauf (moderat)",0],
-  ["Mi 22.07.","K","LT1 4×6' (90″) + 4×400 @ 3:50–3:55 (Sharpener)",0],["Do 23.07.","E","Easy 8 km",0],
+  ["Mi 22.07.","K","LT1 4×6' (90″) + 4×400 @ 3:50–3:55 (Sharpener)",0],["Do 23.07.","E","Easy 11 km",0],
   ["Fr 24.07.","R","Ruhetag",0],["Sa 25.07.","T","5-KM-TEST all-out (Carbon) · 1. km max 3:52 · Ziel 19:15–19:45",0],
   ["So 26.07.","L","Long Run 21 km locker @ 5:15–5:25",0]]},
- {w:"W4",dr:"27.07.–02.08.",km:"~84 km",days:[
+ {w:"W4",dr:"27.07.–02.08.",km:"~90 km",days:[
   ["Mo 27.07.","V","Recovery 10 km",0],["Di 28.07.","G","Gym – kein Lauf",0],
-  ["Mi 29.07.","E","Easy 12 km + Strides",0],
+  ["Mi 29.07.","E","Easy 15 km + Strides",0],
   ["Do 30.07.","K","Double: AM LT1 3×10' (90″) · PM LT2 5×2k (90″) @ 4:00–4:06",0],
-  ["Fr 31.07.","E","Easy 10 km",0],["Sa 01.08.","R","Ruhetag",0],
+  ["Fr 31.07.","E","Easy 13 km",0],["Sa 01.08.","R","Ruhetag",0],
   ["So 02.08.","L","LONG RUN 30 km mit 2×5 km @ MP (1,5 km Float) · Fueling 80–90 g/h",0]]},
  {w:"W5",dr:"03.–09.08.",km:"~66 km · RACE WEEK",days:[
   ["Mo 03.08.","V","Recovery 8 km + Gym leicht (nur Erhaltung)",0],["Di 04.08.","E","Easy 10 km + Strides",0],
@@ -1480,7 +1480,7 @@ $("planwrap").innerHTML=P.map((w,i)=>`
   <div class="wkbody">${w.days.map(d=>`
    <div class="dayrow ${d[3]?'done':''}">
     <div class="dd" style="min-width:74px;">${d[0]}</div>
-    <span class="tpill tp-${d[1]}">${tname[d[1]].toUpperCase()}</span>
+    <span class="tpill tp-${d[1]}">${/^Double/i.test(d[2])?"DOUBLE":tname[d[1]].toUpperCase()}</span>
     <div class="dinfo">${d[2]}</div>
    </div>`).join("")}
   </div>
