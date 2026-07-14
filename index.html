@@ -237,9 +237,9 @@
         <div class="vital"><svg width="56" height="56" class="vr" data-v="90" data-max="100" data-c="#30d158" data-icon="moon" viewBox="0 0 56 56"><circle cx="28" cy="28" r="22" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
  <circle cx="28" cy="28" r="22" fill="none" stroke="#30d158" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="138.23007675795088" stroke-dashoffset="0" transform="rotate(-90 28 28)"></circle>
  <path d="M33 18 a10.5 10.5 0 1 0 6 18 a8.5 8.5 0 0 1 -6 -18 z" fill="#30d158"></path></svg><div><div class="vval">90<span class="vunit"> %</span></div><div class="vlab">Sleep</div><div class="vavg">7T 93 · 30T 89</div></div></div>
-        <div class="vital"><svg width="56" height="56" class="vr" data-v="0.2" data-max="21" data-c="#0a84ff" data-icon="flame" viewBox="0 0 56 56"><circle cx="28" cy="28" r="22" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
+        <div class="vital"><svg width="56" height="56" class="vr" data-v="14.9" data-max="21" data-c="#0a84ff" data-icon="flame" viewBox="0 0 56 56"><circle cx="28" cy="28" r="22" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
  <circle cx="28" cy="28" r="22" fill="none" stroke="#0a84ff" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="138.23007675795088" stroke-dashoffset="49.36788455641102" transform="rotate(-90 28 28)"></circle>
- <path d="M28 40 c-4-2-6-6-4-10 c1-2 3-4 3-7 c3 2 4 4 4 6 c2-1 3-3 3-5 c4 4 6 9 3 13 c-2 3-6 5-9 3 z" fill="#0a84ff"></path></svg><div><div class="vval">0,2<span class="vunit"> / 21</span></div><div class="vlab">Strain</div><div class="vavg">7T 11,8 · 30T 13,0</div></div></div>
+ <path d="M28 40 c-4-2-6-6-4-10 c1-2 3-4 3-7 c3 2 4 4 4 6 c2-1 3-3 3-5 c4 4 6 9 3 13 c-2 3-6 5-9 3 z" fill="#0a84ff"></path></svg><div><div class="vval">14,9<span class="vunit"> / 21</span></div><div class="vlab">Strain</div><div class="vavg">7T 11,8 · 30T 13,0</div></div></div>
         <div class="vital"><svg width="56" height="56" class="vr" data-v="85" data-max="100" data-c="#0a84ff" data-icon="pulse" viewBox="0 0 56 56"><circle cx="28" cy="28" r="22" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
  <circle cx="28" cy="28" r="22" fill="none" stroke="#0a84ff" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="138.23007675795088" stroke-dashoffset="24.881413816431166" transform="rotate(-90 28 28)"></circle>
  <path d="M18 29 h6 l3-7 4 14 3-7 h8" fill="none" stroke="#0a84ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg><div><div class="vval">85<span class="vunit"> ms</span></div><div class="vlab">HRV</div><div class="vavg">7T 74 · 30T 78</div></div></div>
@@ -252,7 +252,7 @@
         <div class="tlight"><div class="lamp grn-on"></div><div class="lamp yel-off"></div><div class="lamp red-off"></div></div>
         <div style="flex:1;">
           <h2 style="margin-bottom:4px;">Heute · Di, 14.07. <span class="tpill tp-G" style="vertical-align:middle;">GYM</span> <span style="color:var(--green);text-transform:none;letter-spacing:0;">· Ampel grün (87 %)</span></h2>
-          <div class="sess">Gym / Kraft – kein Lauf (einbeinig: Step-downs, SL-RDL, Nordic Curls)</div>
+          <div class="sess">Gym / Kraft – kein Lauf (einbeinig: Step-downs, SL-RDL, Nordic Curls) &nbsp;<b style="color:var(--green)">✓ erledigt · Strain 14,9</b></div>
           <div class="det">Grün, aber bewusst lauffrei: heute Kraft-Fokus auf einbeinige Stabilität &amp; hintere Kette – der Reiz kommt aus dem Gym, nicht aus einem Ersatzlauf.</div>
           <div class="why"><b>Begründung Ampel grün:</b> Recovery 87 %, HRV 85 ms (auf Baseline), Ruhepuls 41, Schlaf 90 % – nach dem 12er gestern nur leicht runter von 95 %, weiterhin sehr sauberer Zustand. <b>Warum kein Lauf trotz grün:</b> Dienstag ist im Plan lauffreier Kraft-Tag – das schützt Sehnen/Bänder (Post-ACL) und baut einbeinige Stabilität, ohne zusätzliche Impact-Last. Die frische Erholung sparst du für die Doppel-Schwelle am Donnerstag (LT1 5×6' + LT2 6×1k) – dort zahlt sie sich in Paces aus. Wichtig: Gym heute wirklich als Kraft-Reiz fahren, nicht als verkapptes Ausdauer-Workout. <b>Diese Woche:</b> W2, MP-Block am Sonntag (3×4 km).</div>
         </div>
@@ -1215,7 +1215,7 @@ document.querySelectorAll(".vr").forEach(el=>{
 /* Aktuelle Woche W1 */
 const days=[
  {d:"Mo",dt:"13.07.",t:"E",tl:"EASY",done:1,txt:"12,0 km @ 5:08 · HF 138 · Strain 13,5"},
- {d:"Di",dt:"14.07.",t:"G",tl:"GYM",today:1,txt:"Gym – kein Lauf (einbeinig: Step-downs, SL-RDL, Nordic Curls)"},
+ {d:"Di",dt:"14.07.",t:"G",tl:"GYM",today:1,done:1,txt:"Gym (Kraft) · Strain 14,9 · einbeinig (Step-downs, SL-RDL, Nordic Curls)"},
  {d:"Mi",dt:"15.07.",t:"E",tl:"EASY",txt:"Easy 10 km locker (Vortag Double)"},
  {d:"Do",dt:"16.07.",t:"K",tl:"DOUBLE",txt:"AM LT1 5×6' (90″) @ 4:20–4:28 · PM LT2 6×1k (60″) @ 3:55–4:00"},
  {d:"Fr",dt:"17.07.",t:"E",tl:"EASY",txt:"Easy 12 km + 4 Strides (im Carbon – Eingewöhnung)"},
@@ -1298,7 +1298,7 @@ const calM=[
  {d:10,t:"R",run:"Ruhetag",rec:46,hrv:65,rhr:44,sl:97,st:4.0},
  {d:11,t:"L",run:"Long Run 19,0 km @ 5:23 · HF 142 (Hitze-Cut)",rec:87,hrv:82,rhr:41,sl:100,st:15.7,splits:"km-Splits: 5:16·5:05·5:08·5:10·5:07·5:16·5:17·5:12·5:21·5:16·5:10·5:24·5:14·5:34·5:23·5:19·5:34·5:45·6:31 — HF-Drift ab km 12 (Hitze), Deckel gehalten"},
  {d:12,t:"R",run:"Recovery-Lauf GESKIPPT (8 h Autofahrt, wenig Schlaf)",rec:59,hrv:71,rhr:45,sl:78,st:2.0},{d:13,t:"E",run:"Easy 12,0 km @ 5:08 · HF 138 (Ø) · geplant war Recovery 10 km",rec:95,hrv:90,rhr:40,sl:83,st:13.5},
- {d:14,t:"G",run:"Gym – kein Lauf (einbeinig)",rec:87,hrv:85,rhr:41,sl:90,st:0.2,today:1},{d:15,t:"E",plan:"Easy 10 km locker (Vortag Double)"},
+ {d:14,t:"G",run:"Gym (Kraft) – kein Lauf · einbeinig + hintere Kette",rec:87,hrv:85,rhr:41,sl:90,st:14.9,today:1},{d:15,t:"E",plan:"Easy 10 km locker (Vortag Double)"},
  {d:16,t:"K",plan:"Double: LT1 5×6' (90″) + LT2 6×1k (60″)"},{d:17,t:"E",plan:"Easy 12 km + Strides (Carbon)"},{d:18,t:"R",plan:"Ruhetag"},
  {d:19,t:"K",plan:"MP-Block 3×4 km @ 4:18–4:25"},{d:20,t:"V",plan:"Recovery 8 km"},{d:21,t:"G",plan:"Gym (kein Lauf)"},
  {d:22,t:"K",plan:"LT1 4×6' (90″) + 4×400 Sharpener"},{d:23,t:"E",plan:"Easy 11 km"},{d:24,t:"R",plan:"Ruhetag"},
@@ -1391,7 +1391,7 @@ const P=[
   ["Fr 10.07.","R","✓ Ruhetag · Strain 4,0",1],["Sa 11.07.","L","✓ Long Run 19 km @ 5:23 (Hitze-Cut) · Strain 15,7",1],
   ["So 12.07.","R","<span style='text-decoration:line-through;color:var(--muted)'>Recovery 8 km</span> · ✗ geskippt (8 h Autofahrt, wenig Schlaf) · Strain 2,0 (zählt in Ø)",1]]},
  {w:"W2",dr:"13.–19.07.",km:"~74 km",days:[
-  ["Mo 13.07.","E","✓ Easy 12,0 km @ 5:08 · HF 138 · Strain 13,5",1],["Di 14.07.","G","Gym – kein Lauf (einbeinig: Step-downs, SL-RDL, Nordic Curls)",0],
+  ["Mo 13.07.","E","✓ Easy 12,0 km @ 5:08 · HF 138 · Strain 13,5",1],["Di 14.07.","G","✓ Gym (Kraft) · Strain 14,9 · einbeinig (Step-downs, SL-RDL, Nordic Curls)",1],
   ["Mi 15.07.","E","Easy 10 km locker (Vortag Double)",0],
   ["Do 16.07.","K","Double: AM LT1 5×6' (90″) @ 4:20–4:28 · PM LT2 6×1k (60″) @ 3:55–4:00",0],
   ["Fr 17.07.","E","Easy 12 km + 4 Strides (im Carbon, Eingewöhnung)",0],["Sa 18.07.","R","Ruhetag",0],
