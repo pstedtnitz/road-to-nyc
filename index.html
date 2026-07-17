@@ -226,7 +226,7 @@
           <div class="gaugewrap"><svg width="46" height="46" id="g2"><circle cx="23" cy="23" r="18" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
  <circle cx="23" cy="23" r="18" fill="none" stroke="#0a84ff" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="113.09733552923255" stroke-dashoffset="66.48752452324581" transform="rotate(-90 23 23)"></circle>
  <text x="23" y="27" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">41%</text></svg><div><div class="value" style="font-size:28px;">171<span class="unit"> / 320</span></div>
-          <div class="ontrack"><span class="d" style="background:var(--yellow)"></span><span style="color:var(--yellow)">Unter Soll · Ist 171 / Soll heute ~176 (−5 km · Fr-Easy offen)</span></div></div></div>
+          <div class="ontrack"><span class="d" style="background:var(--yellow)"></span><span style="color:var(--yellow)">Unter Soll · Ist 171 / Soll heute ~176 (−5 km · Easy auf Sa getauscht)</span></div></div></div>
         </div>
       </div>
 
@@ -251,10 +251,10 @@
       <div class="card ampelcard" style="margin-top:10px;">
         <div class="tlight"><div class="lamp grn-off"></div><div class="lamp yel-on"></div><div class="lamp red-off"></div></div>
         <div style="flex:1;">
-          <h2 style="margin-bottom:4px;">Heute · Fr, 17.07. <span class="tpill tp-E" style="vertical-align:middle;">EASY</span> <span style="color:var(--yellow);text-transform:none;letter-spacing:0;">· Ampel gelb (57 %)</span></h2>
-          <div class="sess">Easy 12 km + 4 Strides (im Carbon, Eingewöhnung) · strikt locker, HF &lt; 145</div>
-          <div class="det">Gelb (57 %) – heute wirklich easy, nichts draufpacken. Der Double von gestern kostet Erholung, das ist erwartet und in Ordnung.</div>
-          <div class="why"><b>Schiedsrichter-Ergebnis Double:</b> Recovery 68 → 57 %, HRV 82 → 80, Ruhepuls 40 → 43 – die Doppel-Schwelle hat den erwarteten Abdruck hinterlassen. <b>Aber nichts „kaputt":</b> Dein Schlaf war mit 92 % top, es ist reine Belastungsermüdung, kein Warnsignal. Einordnung nach unserer Regel von gestern: absorbiert, aber am oberen Rand des Vertretbaren – nicht die goldene grüne Landung, aber weit weg von „zu viel" (< 45 %). <b>Heute:</b> Die 12 km strikt locker (HF &lt; 145, eher unteres Ende), Strides nur wenn die Beine frei sind – sonst weglassen. Kein Tempo, kein Ego; Sinn ist Durchblutung &amp; Erholung. <b>Wochenende:</b> Sa Ruhetag, So MP-Block. Klettert die Recovery bis Sonntag nicht wieder Richtung Grün, entschärfe ich den MP-Block – das entscheiden wir am Sonntagmorgen an den Werten.</div>
+          <h2 style="margin-bottom:4px;">Heute · Fr, 17.07. <span class="tpill tp-R" style="vertical-align:middle;">REST</span> <span style="color:var(--yellow);text-transform:none;letter-spacing:0;">· Ampel gelb (57 %)</span></h2>
+          <div class="sess">Ruhetag (Tausch mit Sa) · Regeneration – 2 Spaziergänge, ~7.000 Schritte · kein Lauf</div>
+          <div class="det">Gelb (57 %) – bewusst Ruhetag statt Easy: der Ruhetag liegt so auf dem müdesten Tag, das Easy wandert auf Samstag.</div>
+          <div class="why"><b>Schiedsrichter-Ergebnis Double:</b> Recovery 68 → 57 %, HRV 82 → 80, Ruhepuls 40 → 43 – erwarteter Abdruck der Doppel-Schwelle, bei Schlaf 92 % aber reine Belastungsermüdung, kein Warnsignal. <b>Entscheidung Fr/Sa getauscht:</b> Ruhetag heute, Easy 12 km morgen – sinnvoll, weil der Ruhetag so genau auf dem gelben, müdesten Tag liegt und der Körper über den ganzen Tag rebounden kann. Deine 2 Spaziergänge (~7.000 Schritte) sind genau richtig: aktive Regeneration, Durchblutung ohne Impact – mehr braucht es heute nicht. <b>Sonntag:</b> Der MP-Block bleibt an die Sonntagmorgen-Recovery gekoppelt – ist sie nicht grün, entschärfe ich den Block. Das entscheiden wir an den Werten, nicht vorab.</div>
         </div>
       </div>
 
@@ -1218,8 +1218,8 @@ const days=[
  {d:"Di",dt:"14.07.",t:"G",tl:"GYM",done:1,txt:"Gym (Kraft) · Strain 14,9 · einbeinig (Step-downs, SL-RDL, Nordic Curls)"},
  {d:"Mi",dt:"15.07.",t:"E",tl:"EASY",done:1,txt:"10,2 km @ 5:44 · locker + Strides · Strain 11,2"},
  {d:"Do",dt:"16.07.",t:"K",tl:"DOUBLE",done:1,txt:"LT1 6×6' + LT2 6×1k @ 3:56 · HF 155 · 25 km · Strain 17,2"},
- {d:"Fr",dt:"17.07.",t:"E",tl:"EASY",today:1,txt:"Easy 12 km + 4 Strides (im Carbon – Eingewöhnung)"},
- {d:"Sa",dt:"18.07.",t:"R",tl:"REST",txt:"Ruhetag (vor Long Run)"},
+ {d:"Fr",dt:"17.07.",t:"R",tl:"REST",today:1,done:1,txt:"Ruhetag (Tausch mit Sa) · Regeneration · ~7.000 Schritte"},
+ {d:"Sa",dt:"18.07.",t:"V",tl:"RECOVERY",txt:"Recovery 12 km @ 5:45–6:15 (HF < 130) + Strides · Vortag MP"},
  {d:"So",dt:"19.07.",t:"K",tl:"MP-KEY",txt:"MP-Block 3×4 km @ 4:18–4:25 (1 km Float) · letzter Block im Carbon"},
 ];
 $("days").innerHTML=days.map(x=>`
@@ -1299,7 +1299,7 @@ const calM=[
  {d:11,t:"L",run:"Long Run 19,0 km @ 5:23 · HF 142 (Hitze-Cut)",rec:87,hrv:82,rhr:41,sl:100,st:15.7,splits:"km-Splits: 5:16·5:05·5:08·5:10·5:07·5:16·5:17·5:12·5:21·5:16·5:10·5:24·5:14·5:34·5:23·5:19·5:34·5:45·6:31 — HF-Drift ab km 12 (Hitze), Deckel gehalten"},
  {d:12,t:"R",run:"Recovery-Lauf GESKIPPT (8 h Autofahrt, wenig Schlaf)",rec:59,hrv:71,rhr:45,sl:78,st:2.0},{d:13,t:"E",run:"Easy 12,0 km @ 5:08 · HF 138 (Ø) · geplant war Recovery 10 km",rec:95,hrv:90,rhr:40,sl:83,st:13.5},
  {d:14,t:"G",run:"Gym (Kraft) – kein Lauf · einbeinig + hintere Kette",rec:87,hrv:85,rhr:41,sl:90,st:14.9},{d:15,t:"E",run:"Easy 10,2 km @ 5:44 (locker) + 5 Strides",rec:84,hrv:84,rhr:41,sl:94,st:11.2},
- {d:16,t:"K",run:"Double: AM LT1 6×6' @ 4:16–4:19 · PM LT2 6×1k @ 3:53–4:00 (HF 155)",rec:68,hrv:82,rhr:40,sl:93,st:17.2},{d:17,t:"E",plan:"Easy 12 km + Strides (Carbon)",today:1},{d:18,t:"R",plan:"Ruhetag"},
+ {d:16,t:"K",run:"Double: AM LT1 6×6' @ 4:16–4:19 · PM LT2 6×1k @ 3:53–4:00 (HF 155)",rec:68,hrv:82,rhr:40,sl:93,st:17.2},{d:17,t:"R",run:"Ruhetag (Tausch mit Sa) · Regeneration · ~7.000 Schritte",rec:57,hrv:80,rhr:43,sl:92,st:4.1,today:1},{d:18,t:"V",plan:"Recovery 12 km @ 5:45–6:15 + Strides"},
  {d:19,t:"K",plan:"MP-Block 3×4 km @ 4:18–4:25"},{d:20,t:"V",plan:"Recovery 8 km"},{d:21,t:"G",plan:"Gym (kein Lauf)"},
  {d:22,t:"K",plan:"LT1 4×6' (90″) + 4×400 Sharpener"},{d:23,t:"E",plan:"Easy 11 km"},{d:24,t:"R",plan:"Ruhetag"},
  {d:25,t:"T",plan:"5-KM-TEST all-out (Carbon)"},{d:26,t:"L",plan:"Long Run 21 km locker"},
@@ -1394,7 +1394,7 @@ const P=[
   ["Mo 13.07.","E","✓ Easy 12,0 km @ 5:08 · HF 138 · Strain 13,5",1],["Di 14.07.","G","✓ Gym (Kraft) · Strain 14,9 · einbeinig (Step-downs, SL-RDL, Nordic Curls)",1],
   ["Mi 15.07.","E","✓ Easy 10,2 km @ 5:44 (locker) + Strides · Strain 11,2",1],
   ["Do 16.07.","K","✓ DOUBLE · AM LT1 6×6' @ 4:16–4:19 (HF 151) · PM LT2 6×1k @ 3:53–4:00 (HF 155) · 25 km · Strain 17,2",1],
-  ["Fr 17.07.","E","Easy 12 km + 4 Strides (im Carbon, Eingewöhnung)",0],["Sa 18.07.","R","Ruhetag",0],
+  ["Fr 17.07.","R","✓ Ruhetag (Tausch mit Sa) · Regeneration · 2 Spaziergänge, ~7.000 Schritte",1],["Sa 18.07.","V","Recovery 12 km @ 5:45–6:15 (HF < 130) + 4 Strides · Vortag MP-Block",0],
   ["So 19.07.","K","MP-BLOCK 3×4 km @ 4:18–4:25 (1 km Float) · letzter Block im Carbon · Race-Fueling",0]]},
  {w:"W3",dr:"20.–26.07.",km:"~62 km · Testwoche",days:[
   ["Mo 20.07.","V","Recovery 8 km",0],["Di 21.07.","G","Gym – kein Lauf (moderat)",0],
