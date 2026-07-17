@@ -146,7 +146,7 @@
   .ms .mlab{position:absolute;top:62px;left:-42px;width:84px;text-align:center;font-size:9px;color:var(--ink2);font-weight:600;line-height:1.25;}
   .ms .mdate{color:var(--muted);font-weight:500;display:block;}
   .ms.up .mlab{top:2px;}
-  .runner{position:absolute;top:14px;font-size:20px;transform:translateX(-50%);filter:drop-shadow(0 0 6px rgba(10,132,255,0.7));}
+  .runner{position:absolute;top:14px;font-size:20px;transform:translateX(-50%) scaleX(-1);filter:drop-shadow(0 0 6px rgba(10,132,255,0.7));}
   .runner::after{content:"";position:absolute;left:50%;top:24px;width:2px;height:12px;background:var(--ink);}
   .phasebar{display:flex;height:22px;border-radius:7px;overflow:hidden;margin-top:6px;background:var(--card2);}
   .ph{display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:650;color:var(--muted);cursor:pointer;border-right:1px solid var(--bg);}
@@ -453,7 +453,7 @@
    <div class="dayrow ">
     <div class="dd" style="min-width:74px;">So 19.07.</div>
     <span class="tpill tp-K">KEY</span>
-    <div class="dinfo">MP-BLOCK 3×4 km @ 4:18–4:25 (1 km Float) · letzter Block im Carbon · Race-Fueling</div>
+    <div class="dinfo">MP-BLOCK 3×4 km @ 4:18–4:25 (1 km Float @ 5:00–5:15) · in Trainern · Race-Fueling</div>
    </div>
   </div>
  </div>
@@ -1220,7 +1220,7 @@ const days=[
  {d:"Do",dt:"16.07.",t:"K",tl:"DOUBLE",done:1,txt:"LT1 6×6' + LT2 6×1k @ 3:56 · HF 155 · 25 km · Strain 17,2"},
  {d:"Fr",dt:"17.07.",t:"R",tl:"REST",today:1,done:1,txt:"Ruhetag (Tausch mit Sa) · Regeneration · ~7.000 Schritte"},
  {d:"Sa",dt:"18.07.",t:"V",tl:"RECOVERY",txt:"Recovery 12 km @ 5:45–6:15 (HF < 130) + Strides · Vortag MP"},
- {d:"So",dt:"19.07.",t:"K",tl:"MP-KEY",txt:"MP-Block 3×4 km @ 4:18–4:25 (1 km Float) · letzter Block im Carbon"},
+ {d:"So",dt:"19.07.",t:"K",tl:"MP-KEY",txt:"MP-Block 3×4 km @ 4:18–4:25 (1 km Float @ 5:00–5:15) · in Trainern · Ampel-gated"},
 ];
 $("days").innerHTML=days.map(x=>`
  <div class="dayrow ${x.done?'done':''} ${x.today&&!x.done?'today-hl':''}">
@@ -1300,10 +1300,10 @@ const calM=[
  {d:12,t:"R",run:"Recovery-Lauf GESKIPPT (8 h Autofahrt, wenig Schlaf)",rec:59,hrv:71,rhr:45,sl:78,st:2.0},{d:13,t:"E",run:"Easy 12,0 km @ 5:08 · HF 138 (Ø) · geplant war Recovery 10 km",rec:95,hrv:90,rhr:40,sl:83,st:13.5},
  {d:14,t:"G",run:"Gym (Kraft) – kein Lauf · einbeinig + hintere Kette",rec:87,hrv:85,rhr:41,sl:90,st:14.9},{d:15,t:"E",run:"Easy 10,2 km @ 5:44 (locker) + 5 Strides",rec:84,hrv:84,rhr:41,sl:94,st:11.2},
  {d:16,t:"K",run:"Double: AM LT1 6×6' @ 4:16–4:19 · PM LT2 6×1k @ 3:53–4:00 (HF 155)",rec:68,hrv:82,rhr:40,sl:93,st:17.2},{d:17,t:"R",run:"Ruhetag (Tausch mit Sa) · Regeneration · ~7.000 Schritte",rec:57,hrv:80,rhr:43,sl:92,st:4.1,today:1},{d:18,t:"V",plan:"Recovery 12 km @ 5:45–6:15 + Strides"},
- {d:19,t:"K",plan:"MP-Block 3×4 km @ 4:18–4:25"},{d:20,t:"V",plan:"Recovery 8 km"},{d:21,t:"G",plan:"Gym (kein Lauf)"},
+ {d:19,t:"K",plan:"MP-Block 3×4 km @ 4:18–4:25 (Float @ 5:00–5:15) · in Trainern"},{d:20,t:"V",plan:"Recovery 8 km"},{d:21,t:"G",plan:"Gym (kein Lauf)"},
  {d:22,t:"K",plan:"LT1 4×6' (90″) + 4×400 @ 3:45–3:50 (Ziel-5k-Primer)"},{d:23,t:"E",plan:"Easy 11 km"},{d:24,t:"R",plan:"Ruhetag"},
  {d:25,t:"T",plan:"5-KM-TEST all-out (Carbon)"},{d:26,t:"L",plan:"Long Run 21 km locker"},
- {d:27,t:"K",plan:"8×800 m @ 3:45–3:52 · ~12 km (VO2max · Track)"},{d:28,t:"G",plan:"Gym (kein Lauf)"},{d:29,t:"E",plan:"Easy 13 km + Strides"},
+ {d:27,t:"K",plan:"Absteigende Pyramide 1600+1200+3×800+4×400+5×200 · ~14 km (VO2 · Track)"},{d:28,t:"G",plan:"Gym (kein Lauf)"},{d:29,t:"E",plan:"Easy 11 km + Strides"},
  {d:30,t:"K",plan:"Double: LT1 3×10' + LT2 5×2k · Ampel-gated"},{d:31,t:"E",plan:"Easy 13 km"},
  ]},
 ];
@@ -1395,15 +1395,15 @@ const P=[
   ["Mi 15.07.","E","✓ Easy 10,2 km @ 5:44 (locker) + Strides · Strain 11,2",1],
   ["Do 16.07.","K","✓ DOUBLE · AM LT1 6×6' @ 4:16–4:19 (HF 151) · PM LT2 6×1k @ 3:53–4:00 (HF 155) · 25 km · Strain 17,2",1],
   ["Fr 17.07.","R","✓ Ruhetag (Tausch mit Sa) · Regeneration · 2 Spaziergänge, ~7.000 Schritte",1],["Sa 18.07.","V","Recovery 12 km @ 5:45–6:15 (HF < 130) + 4 Strides · Vortag MP-Block",0],
-  ["So 19.07.","K","MP-BLOCK 3×4 km @ 4:18–4:25 (1 km Float) · letzter Block im Carbon · Race-Fueling",0]]},
+  ["So 19.07.","K","MP-BLOCK 3×4 km @ 4:18–4:25 (1 km Float @ 5:00–5:15) · in Trainern · Ampel-gated · Race-Fueling",0]]},
  {w:"W3",dr:"20.–26.07.",km:"~62 km · Testwoche",days:[
   ["Mo 20.07.","V","Recovery 8 km",0],["Di 21.07.","G","Gym – kein Lauf (moderat)",0],
   ["Mi 22.07.","K","LT1 4×6' (90″) + 4×400 @ 3:45–3:50 (Ziel-5k-Primer, volle Trabpause)",0],["Do 23.07.","E","Easy 11 km",0],
   ["Fr 24.07.","R","Ruhetag",0],["Sa 25.07.","T","5-KM-TEST all-out (Carbon) · 1. km max 3:52 · Ziel 19:15–19:45",0],
   ["So 26.07.","L","Long Run 21 km locker @ 5:15–5:25",0]]},
  {w:"W4",dr:"27.07.–02.08.",km:"~90 km",days:[
-  ["Mo 27.07.","K","8×800 m @ 3:45–3:52/km (~3:00–3:05) · Tp 400 m Trab · ~12 km (VO2max · Track)",0],["Di 28.07.","G","Gym – kein Lauf",0],
-  ["Mi 29.07.","E","Easy 13 km + Strides",0],
+  ["Mo 27.07.","K","Absteigende Pyramide 1600+1200+3×800+4×400+5×200 @ 3:48→3:00 · ~14 km (VO2 · Track) · Alt: 8×800 od. 3×1600+8×400 (Tagesentscheidung)",0],["Di 28.07.","G","Gym – kein Lauf",0],
+  ["Mi 29.07.","E","Easy 11 km + Strides",0],
   ["Do 30.07.","K","Double: AM LT1 3×10' (90″) · PM LT2 5×2k (90″) @ 4:00–4:06 · Ampel-gated (nach Track)",0],
   ["Fr 31.07.","E","Easy 13 km",0],["Sa 01.08.","R","Ruhetag",0],
   ["So 02.08.","L","LONG RUN 30 km mit 2×5 km @ MP (1,5 km Float) · Fueling 80–90 g/h",0]]},
