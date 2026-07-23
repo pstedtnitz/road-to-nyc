@@ -252,10 +252,10 @@
       <div class="card ampelcard" style="margin-top:10px;border-left-color:var(--yellow);">
         <div class="tlight"><div class="lamp grn-off"></div><div class="lamp yel-on"></div><div class="lamp red-off"></div></div>
         <div style="flex:1;">
-          <h2 style="margin-bottom:4px;">Heute · Do, 23.07. <span class="tpill tp-E" style="vertical-align:middle;">SHAKEOUT</span> <span style="color:var(--yellow);text-transform:none;letter-spacing:0;">· Ampel gelb (55 %)</span></h2>
-          <div class="sess">Shakeout 4 km locker + 4 Strides · Test-Vorbereitung · morgen 5-KM-TEST</div>
-          <div class="det">Gelb (55 %) – erwartbarer Dip nach dem Sharpener (69→55, HRV 80→73, Schlaf 90 %). Heute nur Shakeout, das kostet nichts. Entscheidend ist die Ampel morgen früh vor dem Test.</div>
-          <div class="why"><b>Recovery 55 % – gelb, aber genau im Plan:</b> Der Rückgang von 69 auf 55 ist die normale Quittung für den Sharpener (inkl. dem Max-400) – kein Warnsignal, sondern der Körper, der die Einheit verarbeitet. HRV 73 und Ruhepuls 42 sind stabil, der Schlaf mit 90 % gut. <b>Heute:</b> nur Shakeout 4 km + ein paar Strides – bewusst minimal, damit die Beine bis morgen frisch werden. <b>Morgen (Test):</b> Die Recovery sollte über Nacht wieder Richtung grün klettern. Sag mir Freitagfrüh deinen Wert – bei grün volle Attacke (km 1 ~3:40), bei gelb/rot verschieben wir den All-out lieber auf Samstag, als ihn müde zu erzwingen.</div>
+          <h2 style="margin-bottom:4px;">Heute · Do, 23.07. <span class="tpill tp-R" style="vertical-align:middle;">RUHETAG</span> <span style="color:var(--yellow);text-transform:none;letter-spacing:0;">· Ampel gelb (55 %)</span></h2>
+          <div class="sess">Ruhetag – Shakeout geskippt (leicht angeschlagen) · morgen Test nur wenn fit</div>
+          <div class="det">Gelb (55 %) + leicht angeschlagenes Körpergefühl → heute bewusst Ruhetag statt Shakeout. Richtige Entscheidung: dem Immunsystem Raum geben. Morgen früh entscheiden Ampel + Gefühl über den Test.</div>
+          <div class="why"><b>Recovery 55 % (gelb) + „Brodeln" – heute Ruhetag:</b> Der Recovery-Dip nach dem Sharpener ist normal, aber zusammen mit dem leicht angeschlagenen Gefühl ist Skippen die klar richtige Wahl – ein 4-km-Shakeout ist verzichtbar, und komplette Ruhe gibt dem Immunsystem die Ressourcen, ein mögliches Anrollen abzufangen. Für den Test kostet das nichts, im Zweifel bist du frischer. <b>Morgen (Test) – neue Bedingung:</b> nicht nur grüne Ampel, sondern auch ein wirklich gutes Körpergefühl. Ein All-out drückt direkt danach das Immunsystem – wenn etwas anrollt, kann genau das einen Infekt auslösen. Ein verschobener Test kostet nichts (Benchmark, kein Rennen; NYC ist am 1.11.), ein Infekt eine Woche+. Also: grün + fit → Attacke; grün aber weiter angeschlagen → halten; gelb/rot → sowieso verschieben. Faustregel: über dem Hals (Nase/Hals) meist ok, unter dem Hals (Glieder/Fieber/systemisch) → kein hartes Training.</div>
         </div>
       </div>
 
@@ -1218,8 +1218,8 @@ const days=[
  {d:"Mo",dt:"20.07.",t:"V",tl:"RECOVERY",done:1,txt:"8,0 km @ 5:40 · HF < 130 · Recovery 54 %"},
  {d:"Di",dt:"21.07.",t:"G",tl:"GYM",done:1,txt:"Gym – kein Lauf (moderat) · Recovery 71 %"},
  {d:"Mi",dt:"22.07.",t:"K",tl:"KEY",done:1,txt:"Sharpener: LT1 4×6' @ 4:09–4:17 + 4×400 (3:37/3:29/3:31/2:51 · 400m-PB!) · 14,6 km · Recovery 69 %"},
- {d:"Do",dt:"23.07.",t:"E",tl:"SHAKEOUT",today:1,txt:"Shakeout 4 km locker + 4 Strides (Test-Vorbereitung) · Recovery 55 %"},
- {d:"Fr",dt:"24.07.",t:"T",tl:"TEST",txt:"5-KM-TEST all-out (Carbon) · km 1 ~3:40 · Ziel 18:15–18:45 · Stretch sub-18 · km 4–5 drücken · Ampel-gated"},
+ {d:"Do",dt:"23.07.",t:"R",tl:"REST",today:1,txt:"Ruhetag (Shakeout geskippt – leicht angeschlagen) · Recovery 55 %"},
+ {d:"Fr",dt:"24.07.",t:"T",tl:"TEST",txt:"5-KM-TEST all-out · km 1 ~3:40 · Ziel 18:15–18:45 · Stretch sub-18 · km 4–5 drücken · Ampel- & Gesundheits-gated (nur wenn fit)"},
  {d:"Sa",dt:"25.07.",t:"V",tl:"RECOVERY",txt:"Easy/Recovery 8 km locker (Nachlauf Test)"},
  {d:"So",dt:"26.07.",t:"L",tl:"LONG",txt:"Long Run 23 km locker @ 5:15–5:25"},
 ];
@@ -1302,7 +1302,7 @@ const calM=[
  {d:14,t:"G",run:"Gym (Kraft) – kein Lauf · einbeinig + hintere Kette",rec:87,hrv:85,rhr:41,sl:90,st:14.9},{d:15,t:"E",run:"Easy 10,2 km @ 5:44 (locker) + 5 Strides",rec:84,hrv:84,rhr:41,sl:94,st:11.2},
  {d:16,t:"K",run:"Double: AM LT1 6×6' @ 4:16–4:19 · PM LT2 6×1k @ 3:53–4:00 (HF 155)",rec:68,hrv:82,rhr:40,sl:93,st:17.2},{d:17,t:"R",run:"Ruhetag (Tausch mit Sa) · Regeneration · ~7.000 Schritte",rec:57,hrv:80,rhr:43,sl:92,st:4.1},{d:18,t:"V",run:"Recovery 11,7 km @ 5:43 · Ø HF 128 + Strides",rec:95,hrv:94,rhr:40,sl:97,st:11},
  {d:19,t:"K",run:"MP-Block 3×4k @ 4:18/4:18/4:19 · HF 151/155/157 · Floats 4:58/5:09/4:46 · 20 km",rec:70,hrv:82,rhr:41,sl:93,st:16.6},{d:20,t:"V",run:"Recovery 8,0 km @ 5:40 · HF < 130",rec:54,hrv:76,rhr:43,sl:92,st:9.6},{d:21,t:"G",run:"Gym (kein Lauf) · moderat",rec:71,hrv:80,rhr:41,sl:95,st:15.0},
- {d:22,t:"K",run:"Sharpener: LT1 4×6' @ 4:09–4:17 (HF 147) + 4×400 @ 3:37/3:29/3:31/2:51 · 400m-PB 69 s · 14,6 km",rec:69,hrv:80,rhr:42,sl:95,st:13.9},{d:23,t:"E",plan:"Shakeout 4 km + 4 Strides",rec:55,hrv:73,rhr:42,sl:90,st:1.2,today:1},{d:24,t:"T",plan:"5-KM-TEST all-out"},
+ {d:22,t:"K",run:"Sharpener: LT1 4×6' @ 4:09–4:17 (HF 147) + 4×400 @ 3:37/3:29/3:31/2:51 · 400m-PB 69 s · 14,6 km",rec:69,hrv:80,rhr:42,sl:95,st:13.9},{d:23,t:"R",run:"Ruhetag (Shakeout geskippt – leicht angeschlagen)",rec:55,hrv:73,rhr:42,sl:90,st:1.2,today:1},{d:24,t:"T",plan:"5-KM-TEST all-out · Ampel- & Gesundheits-gated"},
  {d:25,t:"V",plan:"Easy/Recovery 8 km (Nachlauf)"},{d:26,t:"L",plan:"Long Run 23 km locker"},
  {d:27,t:"K",plan:"Absteigende Pyramide 1600+1200+3×800+4×400+5×200 · ~14 km (VO2 · Track)"},{d:28,t:"G",plan:"Gym (kein Lauf)"},{d:29,t:"E",plan:"Easy 11 km + Strides"},
  {d:30,t:"K",plan:"Double: LT1 3×10' + LT2 5×2k · Ampel-gated"},{d:31,t:"E",plan:"Easy 13 km"},
@@ -1399,8 +1399,8 @@ const P=[
   ["So 19.07.","K","✓ MP-BLOCK 3×4k @ 4:18/4:18/4:19 · HF 151/155/157 (nur +6 bpm) · Floats 4:58/5:09/4:46 · 20 km · PRs 15k/20k (Sturm) · Strain 16,6",1]]},
  {w:"W3",dr:"20.–26.07.",km:"~62 km · Testwoche",days:[
   ["Mo 20.07.","V","✓ Recovery 8,0 km @ 5:40 · HF < 130 · Strain 9,6",1],["Di 21.07.","G","✓ Gym (kein Lauf, moderat) · Strain 15,0",1],
-  ["Mi 22.07.","K","✓ Sharpener · LT1 4×6' @ 4:09–4:17 (Ø HF 147) + 4×400 @ 3:37/3:29/3:31/2:51 (neuer 400m-PB 69 s!) · 14,6 km · Strain 13,9",1],["Do 23.07.","E","Shakeout 4 km locker + 4 Strides · Test-Vorbereitung",0],
-  ["Fr 24.07.","T","5-KM-TEST all-out (Carbon) · km 1–3 ~3:40, km 4–5 drücken (→3:35) · Ziel 18:15–18:45 · Stretch sub-18 · Ampel-gated",0],["Sa 25.07.","V","Easy/Recovery 8 km locker (Nachlauf Test)",0],
+  ["Mi 22.07.","K","✓ Sharpener · LT1 4×6' @ 4:09–4:17 (Ø HF 147) + 4×400 @ 3:37/3:29/3:31/2:51 (neuer 400m-PB 69 s!) · 14,6 km · Strain 13,9",1],["Do 23.07.","R","✓ Ruhetag (Shakeout geskippt – leicht angeschlagen)",1],
+  ["Fr 24.07.","T","5-KM-TEST all-out · km 1–3 ~3:40, km 4–5 drücken (→3:35) · Ziel 18:15–18:45 · Stretch sub-18 · Ampel- & Gesundheits-gated (nur wenn fit)",0],["Sa 25.07.","V","Easy/Recovery 8 km locker (Nachlauf Test)",0],
   ["So 26.07.","L","Long Run 23 km locker @ 5:15–5:25",0]]},
  {w:"W4",dr:"27.07.–02.08.",km:"~90 km",days:[
   ["Mo 27.07.","K","Absteigende Pyramide 1600+1200+3×800+4×400+5×200 @ 3:48→3:00 · ~14 km (VO2 · Track) · Alt: 8×800 od. 3×1600+8×400 (Tagesentscheidung)",0],["Di 28.07.","G","Gym – kein Lauf",0],
