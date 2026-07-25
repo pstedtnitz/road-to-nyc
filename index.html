@@ -252,10 +252,10 @@
       <div class="card ampelcard" style="margin-top:10px;border-left-color:var(--yellow);">
         <div class="tlight"><div class="lamp grn-off"></div><div class="lamp yel-on"></div><div class="lamp red-off"></div></div>
         <div style="flex:1;">
-          <h2 style="margin-bottom:4px;">Heute · Sa, 25.07. <span class="tpill tp-R" style="vertical-align:middle;">RUHETAG</span> <span style="color:var(--yellow);text-transform:none;letter-spacing:0;">· Ampel gelb (55 %)</span></h2>
-          <div class="sess">Ruhetag – 3. Tag Pause (Infekt-Vorsicht) · Test verschoben, Termin offen</div>
-          <div class="det">Gelb (55 %), HRV auf 70 gefallen (Wochen-Tief) – Körper noch nicht durch. Fr war Recovery zwar grün (85), du hast aber aufs Gefühl gehört und pausiert – richtig. Weiter Ruhe, bis du dich einen ganzen Tag frei fühlst.</div>
-          <div class="why"><b>3 Ruhetage in Folge – konsequent und richtig:</b> Do/Fr/Sa Pause, weil sich etwas „aufbaut". Am <b>Freitag stand die Recovery sogar auf grün (85)</b> – du hast trotzdem dem Körpergefühl vertraut und den Test nicht erzwungen. Genau die Reife, die eine Saison rettet. Heute ist die Zahl wieder gelb (55) und die HRV mit <b>70 auf dem Wochen-Tief</b> – ein Zeichen, dass das Immunsystem noch arbeitet. <b>Konsequenz:</b> weiter ruhen, bis du dich einen ganzen Tag normal fühlst und HRV/Recovery zurück nach oben ziehen. <b>Test:</b> verschoben, Termin offen – der Benchmark läuft dir nicht weg, und der Europalauf (09.08.) liefert ohnehin einen echten Wettkampf-Datenpunkt. <b>Sonntag (Long Run):</b> nur wenn du wirklich fit bist – sonst Easy oder noch ein Ruhetag. Einen 23er über etwas Anrollendes zu quetschen ist der klassische Weg in einen richtigen Infekt (= Woche+ weg). Faustregel: unter dem Hals (Glieder/Fieber) → kein Training; über dem Hals + gutes Gefühl → vorsichtig antesten.</div>
+          <h2 style="margin-bottom:4px;">Heute · Sa, 25.07. <span class="tpill tp-V" style="vertical-align:middle;">EASY</span> <span style="color:var(--yellow);text-transform:none;letter-spacing:0;">· Ampel gelb (55 %)</span></h2>
+          <div class="sess">Easy-Wiedereinstieg 6–8 km (vorsichtig, HF tief) · fühlt sich wieder gut an</div>
+          <div class="det">Recovery noch gelb (55), HRV 70 – aber das Körpergefühl ist heute wieder gut, daher vorsichtiger Wiedereinstieg mit lockeren 6–8 km statt Ruhetag. Bei kleinstem „Brodeln" abbrechen. Morgen bei grün + gutem Gefühl der Long Run.</div>
+          <div class="why"><b>Wiedereinstieg statt Ruhetag – Körpergefühl entscheidet:</b> Nach 3 Ruhetagen fühlst du dich heute wieder gut, also lockerer Fühler-Lauf 6–8 km – Z1, Gesprächstempo, HF bewusst tief. Zweck ist Diagnose, nicht Training: wie reagiert der Körper, und wie stehen HRV/Recovery morgen früh? Abbruchregel: wird das „Brodeln" stärker oder klettert die HF bei lockerem Tempo ungewöhnlich hoch → heimtraben. <b>Weiter geht's</b> (alles gesundheits-gated): morgen So Long Run 23k, wenn du dich frei fühlst und die Werte grün sind. Dann die umgebaute Woche: <b>Di 5k-Test im Carbon</b> (kühler Morgen), Mi Easy früh (Hitze), <b>Do Gym auf dem 33°-Tag</b>, <b>Fr Double Threshold</b>, Sa locker, <b>So 30k</b> (Carbon für den MP-Teil, feel-based).</div>
         </div>
       </div>
 
@@ -1220,7 +1220,7 @@ const days=[
  {d:"Mi",dt:"22.07.",t:"K",tl:"KEY",done:1,txt:"Sharpener: LT1 4×6' @ 4:09–4:17 + 4×400 (3:37/3:29/3:31/2:51 · 400m-PB!) · 14,6 km · Recovery 69 %"},
  {d:"Do",dt:"23.07.",t:"R",tl:"REST",done:1,txt:"Ruhetag (Shakeout geskippt – leicht angeschlagen) · Recovery 55 %"},
  {d:"Fr",dt:"24.07.",t:"R",tl:"REST",done:1,txt:"Ruhetag – Test verschoben (Recovery 85 grün, aber Körper angeschlagen)"},
- {d:"Sa",dt:"25.07.",t:"R",tl:"REST",today:1,txt:"Ruhetag (3. Tag, noch nicht 100 %) · Recovery 55 · HRV 70"},
+ {d:"Sa",dt:"25.07.",t:"V",tl:"EASY",today:1,txt:"Easy 6–8 km Wiedereinstieg (vorsichtig, HF tief) · Recovery 55 · HRV 70"},
  {d:"So",dt:"26.07.",t:"L",tl:"LONG",txt:"Long Run 23 km – nur wenn fit/grün, sonst Easy od. Ruhetag"},
 ];
 $("days").innerHTML=days.map(x=>`
@@ -1234,7 +1234,7 @@ $("days").innerHTML=days.map(x=>`
 const wData=[
  {l:"08–14.06",ist:78},{l:"15–21.06",ist:46},{l:"22–28.06",ist:27},
  {l:"29.06–05.07",ist:91},{l:"06–12.07",ist:61},{l:"13–19.07",ist:79,plan:74},
- {l:"20–26.07",ist:23,plan:62,cur:1},{l:"27.07–02.08",plan:90},{l:"03–09.08",plan:66,race:"HM"},{l:"10–16.08",plan:57},
+ {l:"20–26.07",ist:23,plan:62,cur:1},{l:"27.07–02.08",plan:85},{l:"03–09.08",plan:66,race:"HM"},{l:"10–16.08",plan:57},
 ];
 const mData=[
  {l:"Jan",ist:115},{l:"Feb",ist:53},{l:"Mär",ist:29},{l:"Apr",ist:99},{l:"Mai",ist:133},
@@ -1303,9 +1303,9 @@ const calM=[
  {d:16,t:"K",run:"Double: AM LT1 6×6' @ 4:16–4:19 · PM LT2 6×1k @ 3:53–4:00 (HF 155)",rec:68,hrv:82,rhr:40,sl:93,st:17.2},{d:17,t:"R",run:"Ruhetag (Tausch mit Sa) · Regeneration · ~7.000 Schritte",rec:57,hrv:80,rhr:43,sl:92,st:4.1},{d:18,t:"V",run:"Recovery 11,7 km @ 5:43 · Ø HF 128 + Strides",rec:95,hrv:94,rhr:40,sl:97,st:11},
  {d:19,t:"K",run:"MP-Block 3×4k @ 4:18/4:18/4:19 · HF 151/155/157 · Floats 4:58/5:09/4:46 · 20 km",rec:70,hrv:82,rhr:41,sl:93,st:16.6},{d:20,t:"V",run:"Recovery 8,0 km @ 5:40 · HF < 130",rec:54,hrv:76,rhr:43,sl:92,st:9.6},{d:21,t:"G",run:"Gym (kein Lauf) · moderat",rec:71,hrv:80,rhr:41,sl:95,st:15.0},
  {d:22,t:"K",run:"Sharpener: LT1 4×6' @ 4:09–4:17 (HF 147) + 4×400 @ 3:37/3:29/3:31/2:51 · 400m-PB 69 s · 14,6 km",rec:69,hrv:80,rhr:42,sl:95,st:13.9},{d:23,t:"R",run:"Ruhetag (Shakeout geskippt – leicht angeschlagen)",rec:55,hrv:73,rhr:42,sl:90,st:2.3},{d:24,t:"R",run:"Ruhetag – Test verschoben (Recovery grün 85, aber Körper angeschlagen)",rec:85,hrv:84,rhr:42,sl:94,st:1.6},
- {d:25,t:"R",run:"Ruhetag (3. Tag – noch nicht 100 %)",rec:55,hrv:70,rhr:42,sl:86,st:0.4,today:1},{d:26,t:"L",plan:"Long Run 23 km – nur wenn fit, sonst Easy/Ruhe"},
- {d:27,t:"K",plan:"Absteigende Pyramide 1600+1200+3×800+4×400+5×200 · ~14 km (VO2 · Track)"},{d:28,t:"G",plan:"Gym (kein Lauf)"},{d:29,t:"E",plan:"Easy 11 km + Strides"},
- {d:30,t:"K",plan:"Double: LT1 3×10' + LT2 5×2k · Ampel-gated"},{d:31,t:"E",plan:"Easy 13 km"},
+ {d:25,t:"V",run:"Easy 6–8 km Wiedereinstieg (vorsichtig, HF tief)",rec:55,hrv:70,rhr:42,sl:86,st:0.4,today:1},{d:26,t:"L",plan:"Long Run 23 km – nur wenn fit, sonst Easy/Ruhe"},
+ {d:27,t:"E",plan:"Easy 8–10 km (Wiederaufbau)"},{d:28,t:"T",plan:"5-KM-TEST all-out (Carbon-Debüt) · kühler Morgen · gesundheits-gated"},{d:29,t:"E",plan:"Easy 8 km früh (Hitze 30°) od. Ruhe"},
+ {d:30,t:"G",plan:"Gym (auf Hitze-Tag 33° gelegt)"},{d:31,t:"K",plan:"Double Threshold: LT1 3×10' + LT2 5×2k · Ampel-gated"},
  ]},
 ];
 let calIdx=calM.length-1;
@@ -1400,14 +1400,14 @@ const P=[
  {w:"W3",dr:"20.–26.07.",km:"~62 km · Testwoche",days:[
   ["Mo 20.07.","V","✓ Recovery 8,0 km @ 5:40 · HF < 130 · Strain 9,6",1],["Di 21.07.","G","✓ Gym (kein Lauf, moderat) · Strain 15,0",1],
   ["Mi 22.07.","K","✓ Sharpener · LT1 4×6' @ 4:09–4:17 (Ø HF 147) + 4×400 @ 3:37/3:29/3:31/2:51 (neuer 400m-PB 69 s!) · 14,6 km · Strain 13,9",1],["Do 23.07.","R","✓ Ruhetag (Shakeout geskippt – leicht angeschlagen)",1],
-  ["Fr 24.07.","R","✓ Ruhetag – Test verschoben (Recovery 85 grün, aber angeschlagen)",1],["Sa 25.07.","R","✓ Ruhetag (3. Tag, noch nicht 100 % · Rec 55 / HRV 70)",1],
+  ["Fr 24.07.","R","✓ Ruhetag – Test verschoben (Recovery 85 grün, aber angeschlagen)",1],["Sa 25.07.","V","Easy 6–8 km Wiedereinstieg (vorsichtig, HF tief · Rec 55 / HRV 70)",0],
   ["So 26.07.","L","Long Run 23 km – nur wenn fit/grün, sonst Easy od. Ruhe",0]]},
- {w:"W4",dr:"27.07.–02.08.",km:"~90 km",days:[
-  ["Mo 27.07.","K","Absteigende Pyramide 1600+1200+3×800+4×400+5×200 @ 3:48→3:00 · ~14 km (VO2 · Track) · Alt: 8×800 od. 3×1600+8×400 (Tagesentscheidung)",0],["Di 28.07.","G","Gym – kein Lauf",0],
-  ["Mi 29.07.","E","Easy 11 km + Strides",0],
-  ["Do 30.07.","K","Double: AM LT1 3×10' (90″) · PM LT2 5×2k (90″) @ 4:00–4:06 · Ampel-gated (nach Track)",0],
-  ["Fr 31.07.","E","Easy 13 km",0],["Sa 01.08.","R","Ruhetag",0],
-  ["So 02.08.","L","LONG RUN 30 km mit 2×5 km @ MP (1,5 km Float) · Fueling 80–90 g/h",0]]},
+ {w:"W4",dr:"27.07.–02.08.",km:"~85 km · Comeback",days:[
+  ["Mo 27.07.","E","Easy 8–10 km (locker, Wiederaufbau)",0],["Di 28.07.","T","5-KM-TEST all-out (Carbon-Debüt) · km 1 ~3:40 · Ziel 18:15–18:45 · Stretch sub-18 · kühler Morgen · gesundheits-gated",0],
+  ["Mi 29.07.","E","Easy 8 km früh (Hitze 30°) od. Ruhe",0],
+  ["Do 30.07.","G","Gym – kein Lauf (bewusst auf den 33°-Hitze-Tag gelegt)",0],
+  ["Fr 31.07.","K","Double Threshold: AM LT1 3×10' (90″) · PM LT2 5×2k (90″) @ 4:00–4:06 · Ampel-gated",0],["Sa 01.08.","V","Easy/Recovery 6 km od. Ruhe",0],
+  ["So 02.08.","L","LONG RUN 30 km mit 2×5 km @ MP (1,5 km Float) · feel-based (müde Beine → 26–28k/ohne MP) · Carbon für MP-Teil · Fueling 80–90 g/h",0]]},
  {w:"W5",dr:"03.–09.08.",km:"~66 km · RACE WEEK",days:[
   ["Mo 03.08.","V","Recovery 8 km + Gym leicht (nur Erhaltung)",0],["Di 04.08.","E","Easy 10 km + Strides",0],
   ["Mi 05.08.","K","LT2 leicht 4×1k (60″)",0],["Do 06.08.","E","Easy 8 km",0],["Fr 07.08.","R","Ruhetag",0],
