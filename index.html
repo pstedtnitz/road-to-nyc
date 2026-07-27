@@ -221,7 +221,7 @@
         <div class="card kpi"><div class="label">Woche · W4</div>
           <div class="gaugewrap"><svg width="46" height="46" id="g1"><circle cx="23" cy="23" r="18" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
  <circle cx="23" cy="23" r="18" fill="none" stroke="#0a84ff" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="113.09733552923255" stroke-dashoffset="94.75722706503268" transform="rotate(-90 23 23)"></circle>
- <text x="23" y="27" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">16%</text></svg><div><div class="value" style="font-size:28px;">0<span class="unit"> / 85</span></div><div class="delta" style="margin-top:0;">km · 27.07.–02.08.</div></div></div>
+ <text x="23" y="27" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">16%</text></svg><div><div class="value" style="font-size:28px;">0<span class="unit"> / 68</span></div><div class="delta" style="margin-top:0;">km · 27.07.–02.08.</div></div></div>
         </div>
         <div class="card kpi"><div class="label">Juli</div>
           <div class="gaugewrap"><svg width="46" height="46" id="g2"><circle cx="23" cy="23" r="18" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
@@ -1216,8 +1216,8 @@ document.querySelectorAll(".vr").forEach(el=>{
 /* Aktuelle Woche W1 */
 const days=[
  {d:"Mo",dt:"27.07.",t:"R",tl:"REST",today:1,txt:"Ruhetag – Wiederaufbau · Recovery 57, RHR zurück auf 42 (leichte Besserung), noch nicht grün"},
- {d:"Di",dt:"28.07.",t:"V",tl:"EASY",txt:"Easy 6–8 km Wiederaufbau (wenn grün) od. Ruhe"},
- {d:"Mi",dt:"29.07.",t:"E",tl:"EASY",txt:"Easy 8 km früh (Hitze 30°) od. Ruhe · nur wenn gesund"},
+ {d:"Di",dt:"28.07.",t:"E",tl:"EASY",txt:"Easy 8–10 km Wiederaufbau (wenn grün)"},
+ {d:"Mi",dt:"29.07.",t:"E",tl:"EASY",txt:"Easy 10–12 km früh (Hitze 30°) · wenn gesund"},
  {d:"Do",dt:"30.07.",t:"G",tl:"GYM",txt:"Gym – kein Lauf (33°-Hitze-Tag)"},
  {d:"Fr",dt:"31.07.",t:"K",tl:"KEY",txt:"Double Threshold (leicht gedrosselt) – nur bei grüner Ampel & 100 %"},
  {d:"Sa",dt:"01.08.",t:"V",tl:"RECOVERY",txt:"Easy/Recovery 6 km od. Ruhe"},
@@ -1234,11 +1234,11 @@ $("days").innerHTML=days.map(x=>`
 const wData=[
  {l:"08–14.06",ist:78},{l:"15–21.06",ist:46},{l:"22–28.06",ist:27},
  {l:"29.06–05.07",ist:91},{l:"06–12.07",ist:61},{l:"13–19.07",ist:79,plan:74},
- {l:"20–26.07",ist:31,plan:62},{l:"27.07–02.08",ist:0,plan:85,cur:1},{l:"03–09.08",plan:66,race:"HM"},{l:"10–16.08",plan:57},
+ {l:"20–26.07",ist:31,plan:62},{l:"27.07–02.08",ist:0,plan:68,cur:1},{l:"03–09.08",plan:66,race:"HM"},{l:"10–16.08",plan:68},
 ];
 const mData=[
  {l:"Jan",ist:115},{l:"Feb",ist:53},{l:"Mär",ist:29},{l:"Apr",ist:99},{l:"Mai",ist:133},
- {l:"Jun",ist:230},{l:"Jul",ist:234,plan:320,cur:1},{l:"Aug",plan:325},{l:"Sep",plan:248,race:"B"},{l:"Okt",plan:302},
+ {l:"Jun",ist:230},{l:"Jul",ist:234,plan:320,cur:1},{l:"Aug",plan:333},{l:"Sep",plan:248,race:"B"},{l:"Okt",plan:302},
 ];
 function drawVol(data,max){
  const svg=$("vol"),W=1000,H=195,pL=40,pB=30,pT=14;
@@ -1304,7 +1304,7 @@ const calM=[
  {d:19,t:"K",run:"MP-Block 3×4k @ 4:18/4:18/4:19 · HF 151/155/157 · Floats 4:58/5:09/4:46 · 20 km",rec:70,hrv:82,rhr:41,sl:93,st:16.6},{d:20,t:"V",run:"Recovery 8,0 km @ 5:40 · HF < 130",rec:54,hrv:76,rhr:43,sl:92,st:9.6},{d:21,t:"G",run:"Gym (kein Lauf) · moderat",rec:71,hrv:80,rhr:41,sl:95,st:15.0},
  {d:22,t:"K",run:"Sharpener: LT1 4×6' @ 4:09–4:17 (HF 147) + 4×400 @ 3:37/3:29/3:31/2:51 · 400m-PB 69 s · 14,6 km",rec:69,hrv:80,rhr:42,sl:95,st:13.9},{d:23,t:"R",run:"Ruhetag (Shakeout geskippt – leicht angeschlagen)",rec:55,hrv:73,rhr:42,sl:90,st:2.3},{d:24,t:"R",run:"Ruhetag – Test verschoben (Recovery grün 85, aber Körper angeschlagen)",rec:85,hrv:84,rhr:42,sl:94,st:1.6},
  {d:25,t:"V",run:"Easy 8,0 km @ 6:19 (Wiedereinstieg, locker)",rec:55,hrv:70,rhr:42,sl:86,st:8.7},{d:26,t:"R",run:"Ruhetag – Long Run verschoben (Recovery 50, RHR 44 hoch)",rec:50,hrv:69,rhr:44,sl:87,st:0.4},
- {d:27,t:"R",run:"Ruhetag – Wiederaufbau (Recovery 57, RHR zurück 42)",rec:57,hrv:70,rhr:42,sl:90,st:0.4,today:1},{d:28,t:"E",plan:"Easy 6–8 km Wiederaufbau (wenn grün) od. Ruhe"},{d:29,t:"E",plan:"Easy 8 km früh (Hitze 30°) od. Ruhe"},
+ {d:27,t:"R",run:"Ruhetag – Wiederaufbau (Recovery 57, RHR zurück 42)",rec:57,hrv:70,rhr:42,sl:90,st:0.4,today:1},{d:28,t:"E",plan:"Easy 8–10 km Wiederaufbau (wenn grün)"},{d:29,t:"E",plan:"Easy 10–12 km früh (Hitze 30°) · wenn gesund"},
  {d:30,t:"G",plan:"Gym (auf Hitze-Tag 33° gelegt)"},{d:31,t:"K",plan:"Double Threshold (gedrosselt): LT1 3×10' + LT2 4×2k · nur bei 100 %"},
  ]},
 ];
@@ -1366,7 +1366,7 @@ $("cal").addEventListener("click",e=>{
 })();
 const phases=[
  {n:"Aufbau I",w:3,det:"<b>W1–W3 · 06.–26.07.</b><li>So 19.07.: MP-Block 3×4 km (KEY, Carbon-Debüt)</li><li>Mi 22.07.: LT1 + 4×400 Sharpener</li>"},
- {n:"Aufbau II",w:3,det:"<b>W4–W6 · 27.07.–16.08.</b><li>Di 04.08.: 5-KM-TEST → Zonen-Rekalibrierung (Carbon-Debüt)</li><li>So 02.08.: Easy-Long 20–25 km (Comeback) · 30er → Bremen-Block</li><li>So 09.08.: HM-RACE Europalauf, Start 9:00 (Ziel 1:28–1:32)</li><li>So 16.08.: MP-Block 4×4 km (Carbon)</li>"},
+ {n:"Aufbau II",w:3,det:"<b>W4–W6 · 27.07.–16.08.</b><li>Di 04.08.: 5-KM-TEST → Zonen-Rekalibrierung (Carbon-Debüt)</li><li>So 02.08.: Easy-Long 20–25 km (Comeback) · 30er → Bremen-Block</li><li>So 09.08.: HM-RACE Europalauf, Start 9:00 (Ziel 1:28–1:32)</li><li>So 16.08.: Long Run 26–28 km mit 4×4 @ MP (Carbon)</li>"},
  {n:"Bremen-Spezifik",w:3,det:"<b>W7–W9 · 17.08.–06.09.</b><li>So 23.08.: LR 28 mit 3×5 @ MP</li><li>So 30.08.: GENERALPROBE 33 km mit 14 km MP</li><li>So 06.09.: Progressiver 26er (Fast Finish)</li>"},
  {n:"Bremen",w:1,det:"<b>W10 · Tune-up Week</b><li>So 13.09., 9:30: BREMEN als kontrollierter Dauerlauf – gleichmäßig HF ~150 / ~5:00 min/km, Ziel 3:25–3:30 (kein Rennen, Standortbestimmung für NYC)</li>"},
  {n:"Rege.",w:1,det:"<b>W11 · 14.–20.09.</b><li>Vollständige Erholung, keine Qualität</li>"},
@@ -1402,9 +1402,9 @@ const P=[
   ["Mi 22.07.","K","✓ Sharpener · LT1 4×6' @ 4:09–4:17 (Ø HF 147) + 4×400 @ 3:37/3:29/3:31/2:51 (neuer 400m-PB 69 s!) · 14,6 km · Strain 13,9",1],["Do 23.07.","R","✓ Ruhetag (Shakeout geskippt – leicht angeschlagen)",1],
   ["Fr 24.07.","R","✓ Ruhetag – Test verschoben (Recovery 85 grün, aber angeschlagen)",1],["Sa 25.07.","V","✓ Easy 8,0 km @ 6:19 (Wiedereinstieg, locker) · Strain 8,7",1],
   ["So 26.07.","R","✓ Ruhetag – Long Run verschoben (Recovery 50, RHR 44)",1]]},
- {w:"W4",dr:"27.07.–02.08.",km:"~60 km · Comeback (gated)",days:[
-  ["Mo 27.07.","R","Ruhetag – Wiederaufbau (Recovery 57, noch nicht grün)",0],["Di 28.07.","V","Easy 6–8 km Wiederaufbau (wenn grün) od. Ruhe",0],
-  ["Mi 29.07.","E","Easy 8 km früh (Hitze 30°) od. Ruhe",0],
+ {w:"W4",dr:"27.07.–02.08.",km:"~68 km · Comeback (gated)",days:[
+  ["Mo 27.07.","R","Ruhetag – Wiederaufbau (Recovery 57, noch nicht grün)",0],["Di 28.07.","E","Easy 8–10 km Wiederaufbau (wenn grün)",0],
+  ["Mi 29.07.","E","Easy 10–12 km früh (Hitze 30°) · wenn gesund",0],
   ["Do 30.07.","G","Gym – kein Lauf (bewusst auf den 33°-Hitze-Tag gelegt)",0],
   ["Fr 31.07.","K","Double Threshold (leicht gedrosselt): AM LT1 3×10' (90″) · PM LT2 4×2k (90″) @ 4:00–4:06 · nur bei 100 % & grün",0],["Sa 01.08.","V","Easy/Recovery 6 km od. Ruhe",0],
   ["So 02.08.","L","Easy-Long 20–25 km (kurzfristig entscheiden, nur wenn gesund) · 30er → Bremen-Block · Carbon für ein paar km",0]]},
@@ -1413,11 +1413,11 @@ const P=[
   ["Mi 05.08.","E","Easy 8 km (locker nach Test)",0],["Do 06.08.","E","Easy 8 km + Strides",0],["Fr 07.08.","R","Ruhetag",0],
   ["Sa 08.08.","E","Shakeout 5 km + Strides · Anreise",0],
   ["So 09.08.","RC","HM-RACE EUROPALAUF · Start 9:00 · ALL-OUT im Carbon · Ziel 1:28–1:32 (erste 5 km ≤ 4:15!)",0]]},
- {w:"W6",dr:"10.–16.08.",km:"~57 km",days:[
-  ["Mo 10.08.","R","frei oder 6 km Recovery (nach Beinen)",0],["Di 11.08.","V","Recovery 8 km",0],
+ {w:"W6",dr:"10.–16.08.",km:"~68 km",days:[
+  ["Mo 10.08.","V","Recovery 8 km",0],["Di 11.08.","V","Recovery 8 km",0],
   ["Mi 12.08.","G","Gym – kein Lauf (moderat)",0],["Do 13.08.","K","LT1 4×6' (90″) – nur bei grüner Ampel",0],
-  ["Fr 14.08.","E","Easy 10 km + Strides",0],["Sa 15.08.","R","Ruhetag",0],
-  ["So 16.08.","K","MP-BLOCK 4×4 km (1 km Float) im Carbon · Paces nach HM-Ergebnis",0]]},
+  ["Fr 14.08.","E","Easy 12 km + Strides",0],["Sa 15.08.","R","Ruhetag",0],
+  ["So 16.08.","L","LONG RUN 26–28 km mit 4×4 km @ MP (1 km Float) im Carbon · Paces nach HM · Race-Fueling",0]]},
  {w:"W7",dr:"17.–23.08.",km:"~86 km · Peak 1",days:[
   ["Mo 17.08.","V","Recovery 10 km",0],["Di 18.08.","G","Gym – kein Lauf",0],
   ["Mi 19.08.","E","Easy 15 km + Strides",0],
