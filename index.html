@@ -1238,7 +1238,7 @@ const wData=[
 ];
 const mData=[
  {l:"Jan",ist:115},{l:"Feb",ist:53},{l:"Mär",ist:29},{l:"Apr",ist:99},{l:"Mai",ist:133},
- {l:"Jun",ist:230},{l:"Jul",ist:234,plan:320,cur:1},{l:"Aug",plan:333},{l:"Sep",plan:248,race:"B"},{l:"Okt",plan:302},
+ {l:"Jun",ist:230},{l:"Jul",ist:234,plan:320,cur:1},{l:"Aug",plan:335},{l:"Sep",plan:258,race:"B"},{l:"Okt",plan:306},
 ];
 function drawVol(data,max){
  const svg=$("vol"),W=1000,H=195,pL=40,pB=30,pT=14;
@@ -1429,13 +1429,13 @@ const P=[
   ["Mi 26.08.","K","LT1 3×10' (90″) @ 4:18–4:26",0],["Do 27.08.","E","Easy 12 km",0],
   ["Fr 28.08.","E","Easy 11 km + Strides",0],["Sa 29.08.","R","Ruhetag",0],
   ["So 30.08.","L","GENERALPROBE 33 km: 15 @ 5:00–5:10 + 14 km @ MP am Stück (~2:45 h) · komplettes Race-Setup (Evo SL)",0]]},
- {w:"W9",dr:"31.08.–06.09.",km:"~67 km",days:[
-  ["Mo 31.08.","V","Recovery 8 km",0],["Di 01.09.","G","Gym – kein Lauf",0],
-  ["Mi 02.09.","K","LT2 5×1k (60″)",0],["Do 03.09.","E","Easy 13 km",0],
-  ["Fr 04.09.","E","Easy 10 km + Strides",0],["Sa 05.09.","R","Ruhetag",0],
-  ["So 06.09.","L","PROGRESSIVER 26er in Blöcken: 6@5:25 → 6@5:05 → 6@4:50 → 5@4:35 → 3 km Fast Finish @ MP",0]]},
- {w:"W10",dr:"07.–13.09.",km:"~34 + 42 km · BREMEN",days:[
-  ["Mo 07.09.","V","Recovery 6 km",0],["Di 08.09.","E","Easy 8 km + Strides (kein Gym)",0],
+ {w:"W9",dr:"31.08.–06.09.",km:"~78 km",days:[
+  ["Mo 31.08.","V","Recovery 10 km",0],["Di 01.09.","G","Gym – kein Lauf",0],
+  ["Mi 02.09.","K","LT2 6×1k (60″) @ 3:57–4:03 · letzte harte Threshold vor Bremen-Block",0],["Do 03.09.","E","Easy 15 km",0],
+  ["Fr 04.09.","E","Easy 12 km + Strides",0],["Sa 05.09.","R","Ruhetag",0],
+  ["So 06.09.","L","PROGRESSIVER 28er in Blöcken: 6@5:25 → 7@5:05 → 6@4:50 → 5@4:35 → 4 km Fast Finish @ MP",0]]},
+ {w:"W10",dr:"07.–13.09.",km:"~38 + 42 km · BREMEN",days:[
+  ["Mo 07.09.","V","Recovery 8 km",0],["Di 08.09.","E","Easy 10 km + Strides (kein Gym)",0],
   ["Mi 09.09.","K","MP-Aktivierung 3×2k (90″)",0],["Do 10.09.","R","Ruhetag",0],
   ["Fr 11.09.","E","Easy 6 km + Strides",0],["Sa 12.09.","E","Shakeout 4 km",0],
   ["So 13.09.","RC","BREMEN-MARATHON · Start 9:30 · kontrollierter Tune-up, KEIN Rennen: gleichmäßig HF ~150 / ~5:00 min/km · Ziel 3:25–3:30 · 80–90 g KH/h · letzte 12 km (Neuland-Distanz) bewusst im Griff",0]]},
@@ -1460,9 +1460,9 @@ const P=[
   ["Do 08.10.","K","Double: AM LT1 3×10' (90″) · PM LT2 4×1,5k (90″) @ 3:58–4:05",0],
   ["Fr 09.10.","E","Easy 8 km",0],["Sa 10.10.","R","Ruhetag",0],
   ["So 11.10.","L","GENERALPROBE NYC 36 km: 18 @ 5:00–5:10 + 14 km @ NYC-MP am Stück · Carbon · 90 g KH/h",0]]},
- {w:"W15",dr:"12.–18.10.",km:"~66 km",days:[
+ {w:"W15",dr:"12.–18.10.",km:"~72 km",days:[
   ["Mo 12.10.","V","Recovery 8 km",0],["Di 13.10.","G","Gym – letzte volle Einheit",0],
-  ["Mi 14.10.","K","LT2 5×1k (60″)",0],["Do 15.10.","E","Easy 10 km",0],
+  ["Mi 14.10.","K","Double (letzte vor NYC): AM LT1 4×6' (90″) @ 4:15–4:22 · PM LT2 4×1k (60″) @ 3:57–4:03 — Ampel-gated, sonst nur AM-Teil",0],["Do 15.10.","E","Easy 11 km",0],
   ["Fr 16.10.","E","Easy 8 km + Strides",0],["Sa 17.10.","R","Ruhetag",0],
   ["So 18.10.","L","PROGRESSIVER 30er: 6@5:15 → 6@4:55 → 6@4:40 → 6@4:30 → 4 @ NYC-MP → 2 km Fast Finish @ 4:10–4:15",0]]},
  {w:"W16",dr:"19.–25.10.",km:"~47 km · Taper",days:[
@@ -1475,9 +1475,59 @@ const P=[
   ["Mi 28.10.","K","MP-Aktivierung 3×1,6k (90″) · noch zuhause",0],["Do 29.10.","R","REISETAG → NYC · viel trinken, Kompression, im Flieger alle 2 h bewegen",0],
   ["Fr 30.10.","E","Easy 5 km + Strides",0],["Sa 31.10.","E","Shakeout 4 km (Central Park) · Expo/Startunterlagen · Carbo-Load 8–10 g/kg",0],
   ["So 01.11.","RC","NEW YORK CITY MARATHON · Start ab 9:10 Ortszeit · Carbon · Brücken nach Anstrengung, Central Park entfesseln",0]]},
+ {w:"W18",dr:"02.–08.11.",km:"~10 km · NYC-Recovery (Ausblick Block C)",days:[
+  ["Mo 02.11.","R","Post-Marathon: Ruhe · Central Park spazieren · viel trinken",0],["Di 03.11.","R","Ruhe / lockeres Gehen · NYC genießen",0],
+  ["Mi 04.11.","V","Optional Shakeout 4–5 km ganz locker (nur wenn die Beine wollen)",0],["Do 05.11.","R","Ruhe / Gehen",0],
+  ["Fr 06.11.","V","Optional Shakeout 4–5 km locker",0],["Sa 07.11.","R","REISETAG → Heimflug · Kompression, im Flieger alle 2 h bewegen",0],
+  ["So 08.11.","R","Ankunft · Ruhe",0]]},
+ {w:"W19",dr:"09.–15.11.",km:"~30 km · Regeneration",days:[
+  ["Mo 09.11.","R","Ruhe · Gym leicht optional (Mobilität)",0],["Di 10.11.","V","Easy 6 km ganz locker",0],
+  ["Mi 11.11.","R","Ruhe oder lockeres Rad",0],["Do 12.11.","V","Easy 7 km",0],
+  ["Fr 13.11.","G","Gym leicht – Wiedereinstieg",0],["Sa 14.11.","R","Ruhetag",0],
+  ["So 15.11.","E","Easy 10 km im Wohlfühltempo",0]]},
+ {w:"W20",dr:"16.–22.11.",km:"~40 km · Rebuild",days:[
+  ["Mo 16.11.","V","Recovery 6 km",0],["Di 17.11.","G","Gym",0],
+  ["Mi 18.11.","E","Easy 10 km + 4–6 Strides",0],["Do 19.11.","E","Easy 8 km",0],
+  ["Fr 20.11.","G","Gym (2. Einheit/Woche neu) · Hyrox-Prep: Sled/Lunges/Wall Balls einführen",0],["Sa 21.11.","R","Ruhetag",0],
+  ["So 22.11.","L","Long Run 14 km locker",0]]},
+ {w:"W21",dr:"23.–29.11.",km:"~44 km · Speed-Reintro",days:[
+  ["Mo 23.11.","V","Recovery 7 km",0],["Di 24.11.","G","Gym",0],
+  ["Mi 25.11.","K","VO2-Reintro: 5×1000 (90″) @ ~10k-RT – Intensität kehrt zurück",0],["Do 26.11.","E","Easy 9 km",0],
+  ["Fr 27.11.","G","Gym · Hyrox-Prep",0],["Sa 28.11.","R","Ruhetag",0],
+  ["So 29.11.","L","Long Run 15 km, letzte 3 km flott",0]]},
+ {w:"W22",dr:"30.11.–06.12.",km:"~50 km",days:[
+  ["Mo 30.11.","V","Recovery 8 km",0],["Di 01.12.","G","Gym",0],
+  ["Mi 02.12.","K","Threshold 4×1,5k (75″) @ ~10k-RT bis Schwelle",0],["Do 03.12.","E","Easy 10 km + Strides",0],
+  ["Fr 04.12.","G","Gym · Hyrox-Prep",0],["Sa 05.12.","E","Easy 6 km",0],
+  ["So 06.12.","L","Long Run 16 km locker",0]]},
+ {w:"W23",dr:"07.–13.12.",km:"~48 km · 10k-Spezifik",days:[
+  ["Mo 07.12.","V","Recovery 7 km",0],["Di 08.12.","G","Gym",0],
+  ["Mi 09.12.","K","VO2: 6×800 (90″) @ 5k-RT",0],["Do 10.12.","E","Easy 10 km",0],
+  ["Fr 11.12.","G","Gym · Hyrox-Prep (Rennmodus-Stationen)",0],["Sa 12.12.","R","Ruhetag",0],
+  ["So 13.12.","L","Long Run 15 km mit 4 km @ 10k-RT im Finish",0]]},
+ {w:"W24",dr:"14.–20.12.",km:"~30 km · Hyrox-Woche",days:[
+  ["Mo 14.12.","V","Recovery 6 km",0],["Di 15.12.","K","Kurze Schärfe: 8×400 (60″) @ 5k-RT – locker gehalten",0],
+  ["Mi 16.12.","E","Easy 8 km",0],["Do 17.12.","R","Ruhetag / Anreise Hyrox (Gent, Helsinki oder Paris)",0],
+  ["Fr 18.12.","E","Shakeout 4 km + Strides – Reisebeine lockern",0],["Sa 19.12.","RC","HYROX DOUBLE · JUST FOR FUN · Team, bewusst locker – KEIN Vollgas, der Silvester-5k hat Vorrang (genauer Tag 18.–20.12 je nach Location)",0],
+  ["So 20.12.","R","Ruhe / Regeneration nach Hyrox",0]]},
+ {w:"W25",dr:"21.–27.12.",km:"~42 km",days:[
+  ["Mo 21.12.","V","Recovery 6 km (nur beschwerdefrei nach Hyrox)",0],["Di 22.12.","G","Gym leicht",0],
+  ["Mi 23.12.","K","5k-RT-Reps: 5×1000 (75″) @ 5k-RT",0],["Do 24.12.","E","Easy 8 km (Heiligabend)",0],
+  ["Fr 25.12.","R","Ruhetag",0],["Sa 26.12.","E","Easy 10 km locker",0],
+  ["So 27.12.","E","Easy 8 km + Strides",0]]},
+ {w:"W26",dr:"28.12.–03.01.",km:"~34 km + 5k · SILVESTER",days:[
+  ["Mo 28.12.","V","Recovery 6 km",0],["Di 29.12.","E","Easy 7 km + 4 Strides",0],
+  ["Mi 30.12.","E","Shakeout 5 km + 3×200 @ 5k-RT – Beine wecken",0],["Do 31.12.","RC","SILVESTERLAUF BREMEN 5 km · PR-PROBE all-out · Generalprobe für Valencia · Ziel ~3:45–3:55/km (nach Formstand)",0],
+  ["Fr 01.01.","R","Ruhetag / Neujahr lockeres Gehen",0],["Sa 02.01.","V","Recovery 6 km ganz locker",0],
+  ["So 03.01.","E","Easy 10 km",0]]},
+ {w:"W27",dr:"04.–10.01.",km:"~28 km + 10k · VALENCIA",days:[
+  ["Mo 04.01.","V","Recovery 6 km",0],["Di 05.01.","K","Tune-up: 3×1000 (90″) @ 10k-RT – kurz & scharf, dann Taper",0],
+  ["Mi 06.01.","E","Easy 7 km",0],["Do 07.01.","R","Ruhetag / Reise Valencia",0],
+  ["Fr 08.01.","E","Shakeout 5 km + Strides",0],["Sa 09.01.","E","Shakeout 4 km + 3×150 – Beine wecken",0],
+  ["So 10.01.","RC","VALENCIA 10 km · ZIEL-PR all-out · flach & schnell · negativ splitten · ~3:55–4:05/km (nach Silvester kalibrieren)",0]]},
 ];
 const TODAY=new Date(2026,6,27); /* aktuelles Datum – bei Refresh mitziehen */
-const curIdx=(()=>{let b=0;P.forEach((w,i)=>{const p=w.dr.split("–");const r=p[1];const em=+r.match(/(\d{2})\.\s*$/)[1];const sd=+p[0].match(/^(\d{2})\./)[1];const sm=+((p[0].match(/^\d{2}\.(\d{2})\./)||[])[1]||em);if(TODAY>=new Date(2026,sm-1,sd))b=i;});return b;})();
+const curIdx=(()=>{let b=0,yr=2026,pm=0;P.forEach((w,i)=>{const p=w.dr.split("–");const r=p[1];const em=+r.match(/(\d{2})\.\s*$/)[1];const sd=+p[0].match(/^(\d{2})\./)[1];const sm=+((p[0].match(/^\d{2}\.(\d{2})\./)||[])[1]||em);if(sm<pm)yr++;pm=sm;if(TODAY>=new Date(yr,sm-1,sd))b=i;});return b;})();
 $("planwrap").innerHTML=P.map((w,i)=>`
  <div class="wk ${i===curIdx?'open':''}">
   <div class="wkhead" data-i="${i}"><b>${w.w}</b><span style="color:var(--muted)">${w.dr}</span><span class="wkm">${w.km}${w.st?` · Ø Strain ${w.st}`:``}</span></div>
