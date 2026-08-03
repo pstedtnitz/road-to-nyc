@@ -1222,13 +1222,13 @@ document.querySelectorAll(".vr").forEach(el=>{
 
 /* Aktuelle Woche W1 */
 const days=[
- {d:"Di",dt:"28.07.",t:"R",tl:"REST",done:1,txt:"Ruhetag – RHR 45 (Rückschlag), Recovery 51 · Wiederaufbau-Easy gestrichen"},
- {d:"Mi",dt:"29.07.",t:"E",tl:"EASY",done:1,txt:"8,0 km progressiv @ 4:57 Ø (5:25→4:27) · Ø HF 143 (max 165) — Gate neu (RHR ≤43 & HRV ≥73) erfüllt, Tag 1/2 · HF-Deckel 130 nicht eingehalten"},
- {d:"Do",dt:"30.07.",t:"R",tl:"REST",done:1,txt:"Ruhetag eingehalten (Strain 2,0, kein Lauf) · Recovery 42, RHR 46, HRV 61,5 · Gate gerissen"},
- {d:"Fr",dt:"31.07.",t:"R",tl:"REST",done:1,txt:"Ruhetag eingehalten (Strain 2,1, kein Lauf) · Recovery 40, RHR 45, HRV 58,0 · kein Rebound"},
- {d:"Sa",dt:"01.08.",t:"R",tl:"REST",done:1,txt:"Ruhetag Nr. 3 – Gate gerissen (RHR 45, HRV 56,2) · Strain 1,9, kein Lauf"},
- {d:"So",dt:"02.08.",t:"E",tl:"EASY",done:1,txt:"15,2 km @ 6:02 · Ø HF 132 (max 149) · Umfang verdoppelt und HF-Deckel gerissen — aber die HF-Reaktion war sauber: km 2–12 im Band 127–134, der Anstieg ab km 13 kam mit der Beschleunigung"},
  {d:"Mo",dt:"03.08.",t:"E",tl:"EASY",today:1,txt:"Easy 40–50 min bzw. 8–9 km, HF-Deckel 135, kein Endbeschleunigen · <b style='color:var(--green)'>Infektmarker zurück im Normalbereich</b>: SpO2 95,6 → 97,4 %, Hauttemp 33,79 → 33,45 °C · Rec 38 → 43, HRV 56,0 → 56,8 (erstmals steigend), RHR 46"},
+ {d:"Di",dt:"04.08.",t:"R",tl:"REST",txt:"Ruhetag oder lockeres Gym ohne Beinbelastung · <span style='text-decoration:line-through;color:var(--muted)'>5k-Test</span> endgültig gestrichen"},
+ {d:"Mi",dt:"05.08.",t:"R",tl:"REST",txt:"<b>Arzttermin</b> – großes Blutbild + Ferritin, CRP, Transferrin/Sättigung, Retikulozyten, Holo-TC, Zink, Vitamin D, TSH, CK · nüchtern, vor 10:00 · kein Lauf"},
+ {d:"Do",dt:"06.08.",t:"E",tl:"EASY",txt:"Easy 10–12 km, HF-Deckel 140, 4 Steigerungen à 20 s · <b>abends: Entscheidung über den HM-Modus</b> am HRV-Trend (3 Tage steigend UND 7T-HRV ≥ 65 → all-out)"},
+ {d:"Fr",dt:"07.08.",t:"R",tl:"REST",txt:"Ruhetag · Beine hoch, früh ins Bett – die Schlafkonsistenz (71–75 %) ist der schwächste Wert der Phase"},
+ {d:"Sa",dt:"08.08.",t:"E",tl:"EASY",txt:"Shakeout 5 km locker + 4 Steigerungen · Anreise, Carbon-Schuhe und Verpflegung bereitlegen"},
+ {d:"So",dt:"09.08.",t:"RC",tl:"RACE",txt:"<b>HM Europalauf · Start 9:00.</b> Variante A all-out (erste 5 km ≤ 4:15, Ziel 1:28–1:32, alleiniges NYC-Gate ≤ 1:29) oder Variante B kontrolliert 4:15–4:20 ohne Gate-Wertung · kein B-Rennen, kein Trainingslauf mit Startnummer"},
 ];
 $("days").innerHTML=days.map(x=>`
  <div class="dayrow ${x.done?'done':''} ${x.today&&!x.done?'today-hl':''}">
