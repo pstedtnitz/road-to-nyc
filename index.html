@@ -403,11 +403,11 @@
         <b style="color:var(--green)">E &middot; Entlastung ~68 km</b> &ndash; Mo E10 &middot; Di Gym &middot; <b>Mi KEY A klein 3&times;3 km (15)</b> &middot; Do E10 &middot; Fr E8+Strides &middot; Sa frei &middot; <b>So Longrun 25 km ruhig</b>.<br>
         Zuordnung: W11 Q<sub>klein</sub> &middot; W12 Q &middot; W13 V (mit B2B) &middot; W14 Q (Generalprobe) &middot; W15 V &middot; W16 Taper.</div>
         <div class="why" style="margin-top:6px;"><b style="color:var(--yellow)">H&uuml;gel ohne H&uuml;gel &ndash; Bremen ist flach, NYC hat 250 hm:</b>
-        <b>(1) Laufband 4&ndash;6 % Steigung</b>, 8&times;90 s bei LT2-Effort (HF 165&ndash;172), 90 s Pause &ndash; alle 2&ndash;3 Wochen, exakt dosierbar, der zuverl&auml;ssigste Ersatz.
-        <b>(2) Rampen-Repeats</b> an Br&uuml;ckenauffahrten, Deichkronen oder einer Parkhausrampe: 8&ndash;10&times; 200&ndash;400 m z&uuml;gig hoch, locker runter.
+        <b style="color:var(--green)">(1) Steigungsblock liegt auf dem Gym-Tag</b> (Laufband ist nur dort verf&uuml;gbar): 6&ndash;8&times;90 s @ 5&ndash;6 %, aber bei <b>MP-Effort (HF 152&ndash;160), nicht an der Schwelle</b> &ndash; danach erst die Kraft. Das ist sogar spezifischer: Am Queensboro l&auml;ufst du im Rennen Marathon-Anstrengung hoch, keine Schwelle. Und weil der Block moderat bleibt, gef&auml;hrdet er die Schl&uuml;sseleinheit am Mittwoch nicht &ndash; die Zwei-harte-Tage-Regel bleibt unangetastet.
+        <b>(2) Rampen-Repeats</b> drau&szlig;en als Alternative ohne Gym: Br&uuml;ckenauffahrten, Deichkronen, Parkhausrampe &ndash; 8&ndash;10&times; 200&ndash;400 m z&uuml;gig hoch, locker runter.
         <b>(3) Bergab ist das gr&ouml;&szlig;ere Problem</b> &ndash; die Verrazzano-Abfahrt (km 2&ndash;4) und die Queensboro-Abfahrt (km 26) zerst&ouml;ren den Quadrizeps. Ersatz: exzentrische Kraft im Gym (langsame Step-downs, Nordics, exzentrisches Wadenheben) plus 6&times;20 s Strides leicht bergab auf jeder Deichb&ouml;schung.
         <b style="color:var(--green)">(4) Der beste Ersatz &uuml;berhaupt: MP-Bl&ouml;cke ans ENDE der Longruns.</b> Was dich am Queensboro umbringt, ist nicht die Steigung &ndash; es ist eine Steigung bei km 24 auf m&uuml;den Beinen. Ein 5-km-MP-Block bei km 25 eines 30ers trainiert genau das, ganz ohne H&uuml;gel.</div>
-        <div class="why" style="margin-top:6px;"><b style="color:var(--ink2)">Gym 1&times;/Woche, Fokus einbeinig + exzentrisch:</b> Step-downs, Single-Leg-RDL, Nordic Curls, Wadenheben exzentrisch (3 s ablassen) &ndash; genau das Gewebe, das nach dem Infekt am langsamsten adaptiert hat. Kein Maximalkraft-Beintag vor Schl&uuml;sseleinheiten.</div>
+        <div class="why" style="margin-top:6px;"><b style="color:var(--ink2)">Gym-Tag neu = Steigung + Kraft (~6 km, war lauffrei):</b> erst der Laufband-Steigungsblock solange die Beine frisch sind, dann Kraft einbeinig/exzentrisch &ndash; Step-downs, Single-Leg-RDL, Nordic Curls, Wadenheben mit 3 s Ablassen. Genau das Gewebe, das nach dem Infekt am langsamsten adaptiert hat. Kein Maximalkraft-Beintag. <b>Nebeneffekt:</b> der bisher lauffreie Gym-Tag liefert jetzt ~6 km Umfang &ndash; W6&ndash;W12 steigen dadurch um 5 km, ab W13 bleibt der Umfang gleich (daf&uuml;r sind die Donnerstage k&uuml;rzer).</div>
       </div>
       <div id="planwrap" style="margin-top:12px;">
  <div class="wk open">
@@ -1273,14 +1273,14 @@ const wData=[
  {l:"29.06–05.07",ist:91},{l:"06–12.07",ist:61},{l:"13–19.07",ist:79,plan:74},
  {l:"20–26.07",ist:31,plan:62},{l:"27.07–02.08",ist:23,plan:17},
  {l:"03–09.08",ist:49,plan:53,cur:1,race:"HM"},
- {l:"10–16.08",plan:55},{l:"17–23.08",plan:68},{l:"24–30.08",plan:75},
- {l:"31.08–06.09",plan:79},{l:"07–13.09",plan:57,race:"HM"},
+ {l:"10–16.08",plan:60},{l:"17–23.08",plan:73},{l:"24–30.08",plan:80},
+ {l:"31.08–06.09",plan:84},{l:"07–13.09",plan:57,race:"HM"},
 ];
 const mData=[
  /* Fenster: aktueller Monat mittig (Index 3 von 7) */
  {l:"Mai",ist:133},{l:"Jun",ist:230},{l:"Jul",ist:242,plan:320},
- {l:"Aug",ist:64,plan:272,cur:1},
- {l:"Sep",plan:320,race:"HM"},{l:"Okt",plan:323},{l:"Nov",plan:181,race:"A"},
+ {l:"Aug",ist:64,plan:287,cur:1},
+ {l:"Sep",plan:333,race:"HM"},{l:"Okt",plan:323},{l:"Nov",plan:181,race:"A"},
 ];
 function drawVol(data,max){
  const svg=$("vol"),W=1000,H=195,pL=40,pB=30,pT=14;
@@ -1502,33 +1502,33 @@ const P=[
   ["Fr 07.08.","R","Trab freigegeben, nach Gefühl ausgelassen · Rec am Sa: 97",1],
   ["Sa 08.08.","E","Aktivierung 4,66 km + 4×20 s <b>im Alphafly</b> · Schuhtest bestanden",1],
   ["So 09.08.","RC","<b>EUROPALAUF HM 1:35:23</b> · Ø HF 164,5 (max 177) · 22 °C + Sonne, Schotter · 10 km 43:45 / Rest 51:51 · <b>bereinigt VDOT 50–51</b>",1]]},
- {w:"W6",dr:"10.–16.08.",km:"~55 km · Rückkehr",days:[
+ {w:"W6",dr:"10.–16.08.",km:"~60 km · Rückkehr",days:[
   ["Mo 10.08.","V","Recovery 8 km @ 5:50–6:20 · HF &lt;135",0],
   ["Di 11.08.","V","Recovery 8 km @ 5:50–6:20",0],
-  ["Mi 12.08.","G","Gym – <b>einbeinig + exzentrisch</b>: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
+  ["Mi 12.08.","G","<b>Gym + Steigungsblock</b> (~6 km): 10′ ein, dann <b>6–8×90 s Laufband @ 5–6 %</b> bei <b>MP-Effort, HF 152–160</b> (nicht Schwelle), 90″ locker · danach Kraft einbeinig/exzentrisch: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
   ["Do 13.08.","K","<b>TYP A klein: 3×2 km @ 4:20–4:26</b> (90″) · HF 163–170 · ~11 km · Ampel-gated",0],
   ["Fr 14.08.","E","Easy 10 km @ 5:15–5:40 + 6 Strides",0],
   ["Sa 15.08.","R","Ruhetag",0],
   ["So 16.08.","L","<b>Long Run 18 km @ 5:15–5:30</b>, letzte 3 km @ 4:35–4:45 · <b>Fueling 60 g/h</b>",0]]},
- {w:"W7",dr:"17.–23.08.",km:"~68 km · Aufbau",days:[
+ {w:"W7",dr:"17.–23.08.",km:"~73 km · Aufbau",days:[
   ["Mo 17.08.","V","Recovery 8 km",0],
-  ["Di 18.08.","G","Gym – <b>einbeinig + exzentrisch</b>: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
+  ["Di 18.08.","G","<b>Gym + Steigungsblock</b> (~6 km): 10′ ein, dann <b>6–8×90 s Laufband @ 5–6 %</b> bei <b>MP-Effort, HF 152–160</b> (nicht Schwelle), 90″ locker · danach Kraft einbeinig/exzentrisch: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
   ["Mi 19.08.","E","Easy 10 km + 6 Strides",0],
   ["Do 20.08.","K","<b>TYP A: 3×4 km @ 4:22–4:28</b> (90″) · HF 163–170 · ~16 km",0],
   ["Fr 21.08.","E","Easy 10 km",0],
   ["Sa 22.08.","R","Ruhetag",0],
   ["So 23.08.","L","<b>TYP D: 24 km mit 3×4 km @ MP 4:25–4:33</b> (1,5 km Float) · 60–70 g/h",0]]},
- {w:"W8",dr:"24.–30.08.",km:"~75 km · Generalprobe I",days:[
+ {w:"W8",dr:"24.–30.08.",km:"~80 km · Generalprobe I",days:[
   ["Mo 24.08.","V","Recovery 8 km",0],
-  ["Di 25.08.","G","Gym – <b>einbeinig + exzentrisch</b>: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
+  ["Di 25.08.","G","<b>Gym + Steigungsblock</b> (~6 km): 10′ ein, dann <b>6–8×90 s Laufband @ 5–6 %</b> bei <b>MP-Effort, HF 152–160</b> (nicht Schwelle), 90″ locker · danach Kraft einbeinig/exzentrisch: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
   ["Mi 26.08.","K","<b>TYP B: 5×2 km @ 4:10–4:16</b> (2′) · HF 165–172 · ~15 km",0],
   ["Do 27.08.","E","Easy 12 km locker",0],
-  ["Fr 28.08.","E","Easy 8 km + Strides · <b>HÜGEL-ERSATZ 6×90 s Laufband @ 4–6 %</b> (Einstieg, kurz)",0],
+  ["Fr 28.08.","E","Easy 8 km + 6 Strides",0],
   ["Sa 29.08.","R","Ruhetag (zwingend)",0],
   ["So 30.08.","L","<b>GENERALPROBE I · 30 km: 16 @ 5:10–5:20 + 12 km @ MP 4:28–4:35</b> am Stück · 70–80 g/h",0]]},
- {w:"W9",dr:"31.08.–06.09.",km:"~79 km · Peak 1",days:[
+ {w:"W9",dr:"31.08.–06.09.",km:"~84 km · Peak 1",days:[
   ["Mo 31.08.","V","Recovery 10 km",0],
-  ["Di 01.09.","G","Gym – <b>einbeinig + exzentrisch</b>: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
+  ["Di 01.09.","G","<b>Gym + Steigungsblock</b> (~6 km): 10′ ein, dann <b>6–8×90 s Laufband @ 5–6 %</b> bei <b>MP-Effort, HF 152–160</b> (nicht Schwelle), 90″ locker · danach Kraft einbeinig/exzentrisch: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
   ["Mi 02.09.","K","<b>TYP A groß: 3×5 km @ 4:24–4:30</b> (90″) · ~19 km · Schlüsseleinheit vor Bremen",0],
   ["Do 03.09.","E","Easy 14 km",0],
   ["Fr 04.09.","E","Easy 10 km + Strides",0],
@@ -1542,51 +1542,51 @@ const P=[
   ["Fr 11.09.","E","Easy 6 km + Strides",0],
   ["Sa 12.09.","E","Shakeout 5 km + 4 Steigerungen · Alphafly · Race-Kit raus",0],
   ["So 13.09.","RC","<b>BREMEN HM · ALL-OUT · Eichpunkt · Ziel 1:28–1:31</b> · Eröffnung km 1–5 @ 4:22–4:26 · <b>HF-Check km 5: &gt;165 → Pace raus</b> · km 6–15 @ 4:18–4:22 · ab 16 offen · Gel bei min 35",0]]},
- {w:"W11",dr:"14.–20.09.",km:"~75 km · Rebuild (war Regeneration)",days:[
+ {w:"W11",dr:"14.–20.09.",km:"~80 km · Rebuild (war Regeneration)",days:[
   ["Mo 14.09.","R","Ruhetag – nach HM reichen 3–4 Tage",0],
   ["Di 15.09.","V","Recovery 8 km",0],
   ["Mi 16.09.","E","Easy 12 km + Strides",0],
   ["Do 17.09.","K","<b>TYP A: 3×5 km @ 4:22–4:28</b> (90″) · ~19 km · Paces nach Bremen neu geeicht",0],
   ["Fr 18.09.","E","Easy 10 km + <b>6×20 s Strides leicht bergab</b> (Deichböschung) – exzentrischer Reiz für NYC",0],
-  ["Sa 19.09.","G","Gym – <b>einbeinig + exzentrisch</b>: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
+  ["Sa 19.09.","G","<b>Gym + Steigungsblock</b> (~6 km): 10′ ein, dann <b>6–8×90 s Laufband @ 5–6 %</b> bei <b>MP-Effort, HF 152–160</b> (nicht Schwelle), 90″ locker · danach Kraft einbeinig/exzentrisch: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
   ["So 20.09.","L","<b>TYP D: 26 km mit 2×6 km @ MP</b> · <b>welliges Profil ab jetzt Pflicht</b> · 70–80 g/h",0]]},
- {w:"W12",dr:"21.–27.09.",km:"~85 km · Dauer-Doppel",days:[
+ {w:"W12",dr:"21.–27.09.",km:"~90 km · Dauer-Doppel",days:[
   ["Mo 21.09.","E","Easy 10 km",0],
-  ["Di 22.09.","G","Gym – <b>einbeinig + exzentrisch</b>: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
+  ["Di 22.09.","G","<b>Gym + Steigungsblock</b> (~6 km): 10′ ein, dann <b>6–8×90 s Laufband @ 5–6 %</b> bei <b>MP-Effort, HF 152–160</b> (nicht Schwelle), 90″ locker · danach Kraft einbeinig/exzentrisch: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
   ["Mi 23.09.","K","<b>TYP E · DAUER-DOPPEL: 14 km @ 4:40–4:50 · 5 min Pause · 7 km @ 4:32–4:40</b> · ~23 km · simuliert km 30–42",0],
   ["Do 24.09.","E","Easy 10 km",0],
-  ["Fr 25.09.","E","Easy 12 km + Strides · <b>HÜGEL-ERSATZ: 8×90 s Laufband @ 4–6 % (HF 165–172)</b>, 90″ Pause – oder Rampen-Repeats",0],
+  ["Fr 25.09.","E","Easy 12 km + Strides",0],
   ["Sa 26.09.","R","Ruhetag (Hochzeit)",0],
   ["So 27.09.","L","<b>TYP D: 28 km mit 3×5 km @ MP</b> (1,5 km Float) · 80 g/h",0]]},
  {w:"W13",dr:"28.09.–04.10.",km:"~93 km · B2B + Schwelle",days:[
   ["Mo 28.09.","ED","AM Easy 10 km · PM Easy-Double 6 km (Ampel)",0],
-  ["Di 29.09.","G","Gym – <b>einbeinig + exzentrisch</b>: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
+  ["Di 29.09.","G","<b>Gym + Steigungsblock</b> (~6 km): 10′ ein, dann <b>6–8×90 s Laufband @ 5–6 %</b> bei <b>MP-Effort, HF 152–160</b> (nicht Schwelle), 90″ locker · danach Kraft einbeinig/exzentrisch: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
   ["Mi 30.09.","K","<b>TYP B groß: 6×2 km @ 4:10–4:16</b> (90″) · ~18 km",0],
-  ["Do 01.10.","E","Easy 10 km",0],
+  ["Do 01.10.","E","Easy 6 km locker",0],
   ["Fr 02.10.","E","Easy 6 km",0],
   ["Sa 03.10.","L","<b>TYP F · B2B 1/2: 18 km @ 5:10–5:25, letzte 4 @ MP</b>",0],
   ["So 04.10.","L","<b>TYP F · B2B 2/2: 28 km @ 5:15–5:30 auf müden Beinen</b> · welliges Profil · 80–90 g/h",0]]},
  {w:"W14",dr:"05.–11.10.",km:"~92 km · Peak 2 · GENERALPROBE NYC",days:[
   ["Mo 05.10.","V","Recovery 8 km",0],
-  ["Di 06.10.","G","Gym – <b>einbeinig + exzentrisch</b>: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
+  ["Di 06.10.","G","<b>Gym + Steigungsblock</b> (~6 km): 10′ ein, dann <b>6–8×90 s Laufband @ 5–6 %</b> bei <b>MP-Effort, HF 152–160</b> (nicht Schwelle), 90″ locker · danach Kraft einbeinig/exzentrisch: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
   ["Mi 07.10.","K","<b>TYP A maximal: 4×5 km @ 4:24–4:30</b> (90″) · ~24 km · 20 km Qualität",0],
-  ["Do 08.10.","E","Easy 12 km + <b>6×20 s Strides bergab</b>",0],
-  ["Fr 09.10.","E","Easy 8 km + Strides · <b>HÜGEL-ERSATZ 8×90 s @ 4–6 %</b>",0],
+  ["Do 08.10.","E","Easy 8 km + <b>6×20 s Strides bergab</b>",0],
+  ["Fr 09.10.","E","Easy 8 km + Strides",0],
   ["Sa 10.10.","R","Ruhetag (zwingend)",0],
   ["So 11.10.","L","<b>GENERALPROBE NYC · 34 km: 16 @ 5:10–5:20 + 16 km @ NYC-MP 4:30–4:38</b> am Stück · Alphafly, Race-Kit, <b>90 g/h</b>, welliges Profil",0]]},
  {w:"W15",dr:"12.–18.10.",km:"~82 km",days:[
   ["Mo 12.10.","V","Recovery 8 km",0],
-  ["Di 13.10.","G","Gym – <b>einbeinig + exzentrisch</b>: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
+  ["Di 13.10.","G","<b>Gym + Steigungsblock</b> (~6 km): 10′ ein, dann <b>6–8×90 s Laufband @ 5–6 %</b> bei <b>MP-Effort, HF 152–160</b> (nicht Schwelle), 90″ locker · danach Kraft einbeinig/exzentrisch: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
   ["Mi 14.10.","K","<b>TYP B: 4×3 km @ 4:12–4:18</b> (2′) · ~17 km · letzte harte Schwelle",0],
-  ["Do 15.10.","E","Easy 12 km",0],
-  ["Fr 16.10.","E","Easy 10 km + Strides · <b>HÜGEL-ERSATZ 6×90 s @ 4–6 %</b> (letzte, kurz halten)",0],
+  ["Do 15.10.","E","Easy 8 km",0],
+  ["Fr 16.10.","E","Easy 10 km + Strides",0],
   ["Sa 17.10.","R","Ruhetag",0],
   ["So 18.10.","L","<b>TYP C · Progressiver 28er:</b> 7@5:20 → 7@5:00 → 6@4:45 → 5@4:33 → 3@4:18 · ohne grüne Ampel nur 24 km locker",0]]},
  {w:"W16",dr:"19.–25.10.",km:"~55 km · Taper",days:[
   ["Mo 19.10.","V","Recovery 6 km",0],
-  ["Di 20.10.","G","Gym – <b>einbeinig + exzentrisch</b>: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
+  ["Di 20.10.","G","<b>Gym + Steigungsblock</b> (~6 km): 10′ ein, dann <b>6–8×90 s Laufband @ 5–6 %</b> bei <b>MP-Effort, HF 152–160</b> (nicht Schwelle), 90″ locker · danach Kraft einbeinig/exzentrisch: Step-downs, SL-RDL, Nordics, Wadenheben 3 s ablassen",0],
   ["Mi 21.10.","K","Schärfe: 5×1 km @ 4:12–4:18 (90″) · ~11 km",0],
-  ["Do 22.10.","E","Easy 10 km",0],
+  ["Do 22.10.","E","Easy 6 km",0],
   ["Fr 23.10.","E","Easy 8 km + Strides",0],
   ["Sa 24.10.","R","Ruhetag",0],
   ["So 25.10.","L","<b>18 km: 12 locker + 6 km @ NYC-MP</b> · letzter Fueling-Test",0]]},
