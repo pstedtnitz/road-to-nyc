@@ -222,7 +222,7 @@
         <div class="card kpi"><div class="label">Woche · W7</div>
           <div class="gaugewrap"><svg width="46" height="46" id="g1"><circle cx="23" cy="23" r="18" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
  <circle cx="23" cy="23" r="18" fill="none" stroke="#0a84ff" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="113.09733552923255" stroke-dashoffset="98.01769079200155" transform="rotate(-90 23 23)"></circle>
- <text x="23" y="27" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">13%</text></svg><div><div class="value" style="font-size:28px;">34,6<span class="unit"> / 72</span></div><div class="delta" style="margin-top:0;">km · 17.08.–23.08. · <b style="color:var(--t-test)">5-KM-TEST</b></div></div></div>
+ <text x="23" y="27" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">13%</text></svg><div><div class="value" style="font-size:28px;">34,6<span class="unit"> / 85</span></div><div class="delta" style="margin-top:0;">km · 17.08.–23.08. · <b style="color:var(--t-test)">5-KM-TEST</b></div></div></div>
         </div>
         <div class="card kpi"><div class="label">August</div>
           <div class="gaugewrap"><svg width="46" height="46" id="g2"><circle cx="23" cy="23" r="18" fill="none" stroke="#2c2c2e" stroke-width="4.5"></circle>
@@ -557,7 +557,7 @@ function gauge(el,pct,color,label){
  <circle cx="23" cy="23" r="${r}" fill="none" stroke="${color}" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${off}" transform="rotate(-90 23 23)"/>
  <text x="23" y="27" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">${label}</text>`;
 }
-gauge($("g1"),48,"#0a84ff","48%");
+gauge($("g1"),41,"#0a84ff","41%");
 gauge($("g2"),53,"#0a84ff","53%");
 
 /* Vitals rings */
@@ -601,7 +601,7 @@ const wData=[
  {l:"13–19.07",ist:79,plan:74},{l:"20–26.07",ist:31,plan:62},
  {l:"27.07–02.08",ist:23,plan:17},{l:"03–09.08",ist:49,plan:53,race:"HM"},
  {l:"10–16.08",ist:56.4,plan:62},
- {l:"17–23.08",ist:34.6,plan:72,cur:1},{l:"24–30.08",plan:79},{l:"31.08–06.09",plan:85},
+ {l:"17–23.08",ist:34.6,plan:85,cur:1},{l:"24–30.08",plan:79},{l:"31.08–06.09",plan:85},
  {l:"07–13.09",plan:57,race:"HM"},{l:"14–20.09",plan:76},{l:"21–27.09",plan:88},
 ];
 const mData=[
