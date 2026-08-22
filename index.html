@@ -586,7 +586,7 @@ const days=[
  {d:"Do",dt:"20.08.",t:"K",tl:"KEY",done:1,txt:"<b>AM GELAUFEN: LT1 5×6′ – 4:15 · 4:15 · 4:19 · 4:18 · 4:15</b> (90″) · 10,5 km · Ø HF 138,6 (max 159) · <b style='color:var(--green)'>Reps im Schnitt HF 150 – unteres Bandende</b> · Kadenz 89,4 · Superblast Seashell · Morgenwerte: Rec 75, RHR 41, HRV 78,1 · <b style='color:var(--red)'>PM (5×1 km) GESTRICHEN</b> – Chiropraktiker-Termin mittags, Laufverbot für den Rest des Tages"},
  {d:"Fr",dt:"21.08.",t:"L",tl:"LONG",done:1,txt:"<b>GELAUFEN: 25,6 km @ 4:58</b> (Lauf in die Heimat) · <b>Ø HF 145,7</b> (max 166) · Kadenz 91,1 · 99 hm · Superblast Türkis · <b style='color:var(--yellow)'>HF-Deckel war 140</b> · Decoupling +2,8 % · <b>abends zusätzlich 4,1 km @ 7:17</b> · Tag gesamt <b>29,6 km</b> statt 24"},
  {d:"Sa",dt:"22.08.",t:"R",tl:"REST",today:1,txt:"<b>Ruhetag</b> · Morgenwerte: Recovery 57, RHR 44 (2. Morgen), HRV 71,1, Schlaf 98 % bei <b>9:05 h</b> – längste Nacht der Phase"},
- {d:"So",dt:"23.08.",t:"K",tl:"KEY",txt:"<b>TYP E · DAUER-DOPPEL: 70 min @ 4:42–4:52 · 5 min Pause · 40 min @ 4:30–4:40</b> + WU/CD = ~26 km · HF 148–158 · 70–80 g KH/h"}
+ {d:"So",dt:"23.08.",t:"K",tl:"KEY",txt:"<b>TYP E · DAUER-DOPPEL: 70 min @ 4:40–4:50 · 5 min Pause · 40 min @ 4:15–4:30</b> + WU/CD = ~26 km · HF 148–158 · 70–80 g KH/h"}
 ];
 $("days").innerHTML=days.map(x=>`
  <div class="dayrow ${x.done?'done':''} ${x.today&&!x.done?'today-hl':''}">
@@ -702,7 +702,7 @@ const calM=[
  {d:20,t:"K",run:"AM: LT1 5×6′ (90″) – 4:15·4:15·4:19·4:18·4:15 · 10,5 km · Ø HF 138,6 (max 159) · Reps Ø HF 150 · PM 5×1 km GESTRICHEN (Chiropraktiker)",rec:75,hrv:78,rhr:41,sl:97,splits:"Vorgabe war 4:15–4:24 bei HF 150–158 – alle fünf Reps am schnellen Bandende · HF je Rep im Mittel 146·149·151·153·154, Maximum 159 in Rep 5 · Trabpausen 90 s, HF fiel auf 128–137 · Gate 1 (Rec ≥60, RHR ≤43): 75 / 41 bestanden · Gate 2 (nach Rep 1): 4:15 bei HF 144→148, klar im Rahmen"},
  {d:21,t:"L",run:"25,6 km @ 4:58 in die Heimat · Ø HF 145,7 (max 166) · Kadenz 91,1 · 99 hm · Superblast Türkis · abends 4,1 km @ 7:17 · Tag gesamt 29,6 km",rec:60,hrv:73,rhr:44,sl:97,splits:"Vorgabe war 24 km mit HF-Deckel 140 – gelaufen 25,6 bei Ø HF 145,7 · 1. Hälfte km 1–12: 5:01 bei HF 141,7 · 2. Hälfte km 13–24: 4:56 bei HF 148,6 · Decoupling +2,8 % · letzte 3 km 4:41·4:40·4:45 bei HF 155–160 · In-Run: 5k 23:48 · 10k 48:36 · HM 1:46:03 · Tagesstrain 17,9 = höchster Wert seit dem HM"},
  {d:22,t:"R",today:1,run:"Ruhetag",rec:57,hrv:71,rhr:44,sl:98,splits:"Erste Werte NACH den 29,6 km vom Freitag · 9:05 h Schlaf bei 98 % Performance – längste Nacht der Phase – und trotzdem Recovery nur 57 · RHR zweiten Morgen in Folge bei 44 (Basis 41) · Abbruchkriterium 1 verlangt 45 an zwei Morgen: formal NICHT erfüllt"},
- {d:23,t:"K",plan:"TYP E · DAUER-DOPPEL: 70 min @ 4:42–4:52 · 5 min Pause · 40 min @ 4:30–4:40 + WU/CD = ~26 km · HF 148–158 · 70–80 g/h"},
+ {d:23,t:"K",plan:"TYP E · DAUER-DOPPEL: 70 min @ 4:40–4:50 · 5 min Pause · 40 min @ 4:15–4:30 + WU/CD = ~26 km · HF 148–158 · 70–80 g/h"},
  {d:24,t:"V",plan:"Recovery 8 km"},
  {d:25,t:"G",plan:"Gym (Kraft) – einbeinig/exzentrisch · kein Lauf · Beine frei für Mi"},
  {d:26,t:"K",plan:"DOUBLE THRESHOLD: AM 5×2 km @ 4:15–4:24 (90″), HF 150–158 · PM (≥6 h) 5×1 km @ 3:55–4:05 (75″), HF 155–162 · ~22 km · Ampel-gated"},
@@ -845,7 +845,7 @@ const P=[
   ["Do 20.08.","K","<b>AM GELAUFEN: LT1 5×6′ – 4:15 · 4:15 · 4:19 · 4:18 · 4:15</b> (90″) · 10,5 km · Ø HF 138,6 (max 159) · Reps Ø HF 150 · Gate 1 + 2 bestanden (Rec 75, RHR 41) · <b>PM 5×1 km GESTRICHEN</b> – Chiropraktiker-Termin mittags, Laufverbot für den Rest des Tages",1],
   ["Fr 21.08.","L","<b>GELAUFEN: 25,6 km @ 4:58</b> (Lauf in die Heimat) · <b>Ø HF 145,7</b> (max 166) · Kadenz 91,1 · 99 hm · Superblast Türkis · <b>Decoupling +2,8 %</b> · HF-Deckel war 140 · <b>abends zusätzlich 4,1 km @ 7:17</b> · Tag gesamt <b>29,6 km</b> statt 24",1],
   ["Sa 22.08.","R","Ruhetag",0],
-  ["So 23.08.","K","<b>TYP E · DAUER-DOPPEL (nach Liam Henderson): 70 min @ 4:42–4:52 · 5 min Pause · 40 min @ 4:30–4:40</b> + WU/CD = ~26 km · HF 148–158 · <b>identisch in W7 und W12 zum direkten Vergleich</b> · simuliert km 30–42 · 70–80 g/h",0]]},
+  ["So 23.08.","K","<b>TYP E · DAUER-DOPPEL (nach Liam Henderson): 70 min @ 4:40–4:50 · 5 min Pause · 40 min @ 4:15–4:30</b> + WU/CD = ~26 km · <b style='color:var(--yellow)'>Block 2 am 22.08. auf 4:15–4:30 angehoben – Entscheidung Patrick, bewusst als Key Session, die die Grenze zeigen soll</b> · <b>Block 2 am langsamen Ende eröffnen (4:30) und nach unten arbeiten</b> · Abbruch, wenn HF in den ersten 10 min von Block 2 über 165 · Gel in der 5-min-Pause · 70–80 g KH/h · identisch in W7 und W12 zum direkten Vergleich · simuliert km 30–42",0]]},
  {w:"W8",dr:"24.–30.08.",km:"~79 km · Generalprobe I",days:[
   ["Mo 24.08.","V","Recovery 8 km",0],
   ["Di 25.08.","G","<b>Gym (Kraft)</b> – einbeinig und exzentrisch: Step-downs, SL-RDL, Nordics, Wadenheben mit 3 s Ablassen · <b>kein Lauf</b>",0],
@@ -881,7 +881,7 @@ const P=[
  {w:"W12",dr:"21.–27.09.",km:"~88 km · 2. Dauer-Doppel",days:[
   ["Mo 21.09.","E","Easy 10 km",0],
   ["Di 22.09.","G","<b>Gym (Kraft)</b> – einbeinig und exzentrisch: Step-downs, SL-RDL, Nordics, Wadenheben mit 3 s Ablassen · <b>kein Lauf</b>",0],
-  ["Mi 23.09.","K","<b>TYP E · DAUER-DOPPEL (nach Liam Henderson): 70 min @ 4:42–4:52 · 5 min Pause · 40 min @ 4:30–4:40</b> + WU/CD = ~26 km · HF 148–158 · <b>identisch in W7 und W12 zum direkten Vergleich</b> · simuliert km 30–42",0],
+  ["Mi 23.09.","K","<b>TYP E · DAUER-DOPPEL (nach Liam Henderson): 70 min @ 4:40–4:50 · 5 min Pause · 40 min @ 4:15–4:30</b> + WU/CD = ~26 km · HF 148–158 · <b>identisch in W7 und W12 zum direkten Vergleich</b> · simuliert km 30–42",0],
   ["Do 24.09.","ED","AM Easy 10 km · <b>PM Easy-Double 6 km</b> (HF &lt;140, ≥6 h Abstand) · Ampel-gated",0],
   ["Fr 25.09.","E","Easy 10 km + Strides",0],
   ["Sa 26.09.","R","Ruhetag (Hochzeit)",0],
