@@ -387,7 +387,7 @@
         <div class="why" style="margin-top:6px;"><b style="color:var(--ink2)">Regeln:</b> HF ist Anker, Pace Ableitung &middot; &uuml;ber 18 &deg;C +5&ndash;10 s/km, Schotter +10&ndash;20 &middot; Fueling 60 &rarr; 90 g/h bis 11.10. &middot; welliges Profil ab W11 &middot; Umfang 49 &rarr; 90 km (Peak W13), chronisch 45,5 &rarr; ~89. Easy-Doubles: W8, W9, W12 &ndash; nicht in W11 (nach Bremen) und nicht ab W14 (NYC-Spezifik).</div>
         <div class="why" style="margin-top:6px;"><b style="color:var(--red)">Korrektur:</b> In der ersten Fassung dieser Revision hatte ich die <b>Double Thresholds komplett gestrichen</b> &ndash; ohne Begr&uuml;ndung und zu Unrecht. Sie waren vor dem Infekt deine produktivste Einheit, und ihr Prinzip passt gerade jetzt besonders gut: dieselbe Schwellenmenge auf zwei Sessions verteilt kostet <i>weniger</i> Einzelerm&uuml;dung als ein 24-km-Block am St&uuml;ck &ndash; bei einem K&ouml;rper, der nach harten Einheiten aktuell mit Recovery 26 antwortet, ist das der bessere Weg. <b>DT ist zur&uuml;ck in W7, W8, W11 und W15</b>, mit korrigierten Paces und immer Ampel-gated (bei Gelb nur der AM-Teil). <b style="color:var(--ink2)">Aber nicht auf Kosten der langen Reps:</b> DT-Intervalle sind 6&ndash;10 Minuten lang, die Typ-A-Reps 16&ndash;25 Minuten &ndash; das sind zwei verschiedene Reize, kein Ersatz f&uuml;reinander. Deshalb bleiben 3&times;5 und 4&times;5 km als eigene Einheiten stehen.</div>
         <div class="why" style="margin-top:6px;"><b style="color:var(--ink2)">Schl&uuml;sseleinheiten im &Uuml;berblick &ndash; jede Woche zwei, nichts f&auml;llt weg:</b><br>
-        W6 <b>A</b> 4&times;2 km | LR 21 &middot; W7 <b>DT</b> | <b>E</b> Dauer-Doppel &middot; W8 <b>DT</b> (AM 5&times;2 km) | <b>GP I 32 km</b> mit 12 MP &middot; W9 <b>A</b> 3&times;5 km | LR 26 progressiv &middot; W10 Aktivierung | <b>BREMEN HM</b><br>
+        W6 <b>A</b> 4&times;2 km | LR 21 &middot; W7 <b>DT</b> | <b>E</b> Dauer-Doppel &middot; W8 <b>DT</b> (AM 5&times;2 km) | <b>GP I 32 km</b> mit 12 MP &middot; W9 <b>A</b> 4&times;5 km | LR 26 progressiv &middot; W10 Aktivierung | <b>BREMEN HM</b><br>
         W11 <b>DT</b> | LR 26 mit 3&times;5 @ MP &middot; W12 <b>E</b> Dauer-Doppel | So R&uuml;ckflug (Longrun entf&auml;llt) &middot; W13 <b>G 3-Std-Lauf 34</b> | <b>B2B</b> 12+26 &middot; W14 <b>A</b> 4&times;5 km | <b>GP NYC 36 km</b> mit 16 MP &middot; W15 <b>DT</b> | LR 28 progressiv &middot; W16 Sch&auml;rfe | LR 18 mit 6 MP<br>
         Bilanz: <b>4&times; DT, 3&times; Typ A (lange Reps), 2&times; Typ C, 2&times; Typ E, 1&times; Typ G (3-Std-Lauf), 1&times; B2B</b> &ndash; der VO2-Bahntag ist nur noch optional &ndash; reines Typ B entf&auml;llt, die Schwelle steckt vollst&auml;ndig in den DT-Nachmittagen &ndash; das 5&times;2 km steckt im AM-Teil des Doubles am 26.08. Die beiden Dauer-Doppel (23.08. und 23.09.) sind <b>bewusst identisch</b>: 70 + 40 min wie bei Liam, damit du sie direkt vergleichen kannst &ndash; dazu in <i>jeder</i> Woche lange Reps am Renntempo im Longrun.</div>
         <div class="why" style="margin-top:6px;"><b style="color:var(--ink2)">Wochentypen (rotieren Q &rarr; V &rarr; Q &rarr; E):</b>
@@ -613,14 +613,14 @@ const wData=[
  {l:"20–26.07",ist:31,plan:62},{l:"27.07–02.08",ist:23,plan:17},
  {l:"03–09.08",ist:49,plan:53,race:"HM"},{l:"10–16.08",ist:56.4,plan:62},
  {l:"17–23.08",ist:90.4,plan:90},
- {l:"24–30.08",ist:45.6,plan:91,cur:1},{l:"31.08–06.09",plan:85},{l:"07–13.09",plan:57,race:"HM"},
+ {l:"24–30.08",ist:45.6,plan:91,cur:1},{l:"31.08–06.09",plan:90},{l:"07–13.09",plan:57,race:"HM"},
  {l:"14–20.09",plan:76},{l:"21–27.09",plan:80},{l:"28.09–04.10",plan:90},
 ];
 const mData=[
  /* Fenster: aktueller Monat mittig (Index 3 von 7) */
  {l:"Mai",ist:133},{l:"Jun",ist:230},{l:"Jul",ist:242,plan:320},
  {l:"Aug",ist:257,plan:312,cur:1,race:"HM"},
- {l:"Sep",plan:330,race:"HM"},{l:"Okt",plan:285},{l:"Nov",plan:181,race:"A"},
+ {l:"Sep",plan:335,race:"HM"},{l:"Okt",plan:285},{l:"Nov",plan:181,race:"A"},
 ];
 function drawVol(data,max){
  const svg=$("vol"),W=1000,H=195,pL=40,pB=30,pT=14;
@@ -785,7 +785,7 @@ $("cal").addEventListener("click",e=>{
 const phases=[
  {n:"Aufbau I",w:3,det:"<b>W1–W3 · 06.–26.07.</b><li>So 19.07.: MP-Block 3×4 km (KEY, Carbon-Debüt)</li><li>Mi 22.07.: LT1 + 4×400 Sharpener</li>"},
  {n:"Aufbau II",w:3,det:"<b>W4–W6 · 27.07.–16.08.</b><li>So 02.08.: 15,2 km @ 6:02 · Ø HF 132 – HF-Reaktion sauber (km 2–12 im Band 127–134)</li><li>Mo 03.08.: <b style='color:var(--green)'>Infektmarker wieder normal</b> (SpO2 97,4 · Hauttemp 33,45) – Laufen freigegeben, Ruhetag auf eigene Entscheidung</li><li>Di 04.08.: <b style='color:var(--green)'>Recovery 71 – erster grüner Tag seit dem 29.07.</b> (HRV 56,8 → 66,9, Hauttemp 32,81 °C) · gelaufen: 10,0 km @ 5:08 · Ø HF 145 (max 157) bei 27 °C · Strain 13,3 · 5k-TEST <b style='color:var(--red)'>GESTRICHEN</b></li><li>Mi 05.08.: Arzttermin + Blutabnahme · abends <b style='color:var(--green)'>progressiver Tempolauf 12,0 km: 20' @5:06 · 15' @4:44 · 10' @4:21 · 1k-Finish 3:48</b> (max HF 175) – stärkste Einheit seit der Infektpause, muskulär sauber</li><li>Do 06.08.: Gym 92 min · Recovery 26 = Tiefstwert · Abendlauf gestrichen · Fr 07.08.: Recovery 59, Trab freigegeben, aber nach Gefühl ausgelassen · Sa 08.08.: <b style='color:var(--green)'>Recovery 97</b>, Aktivierung 4,7 km im Alphafly</li><li>So 09.08.: <b style='color:var(--yellow)'>EUROPALAUF HM 1:35:23 – 26./177 M gesamt, 6. AK M35.</b> Erste 10 km 43:45, zweite Hälfte 51:51 · Ø HF 164,5, max 177 · <b>VDOT 47,7 auf 4 Sekunden bestätigt</b> (bereinigt 50–51), Limiter ist der Umfang – <b style='color:var(--green)'>Zonentabelle steht bewusst weiter auf dem Stand vor dem Infekt</b>, geeicht wird erst an einem Rennen</li><li>Di 11.–So 16.08.: Rückkehrwoche W6 mit <b>56,4 km</b> · Do 13.08. 3×2 km LT2 (4:04/4:04/4:09) · Sa 15.08. <b style='color:var(--green)'>Long Run 22 km, Decoupling nur 2,3 %</b> – die Gegenevidenz zum Renntag · Meilenstein 1.000 km in 2026</li>"},
- {n:"Bremen-Spezifik",w:3,det:"<b>W7–W9 · 17.08.–06.09. · alle Paces auf Zonen v3 umgestellt</b><li>Do 20.08.: TYP A 3×4 km @ 4:22–4:28 – erste lange Sub-Threshold-Einheit</li><li>Mi 26.08.: TYP B 5×2 km @ 3:55–4:05 (10 s/km langsamer als im alten Plan)</li><li>So 30.08.: <b>GENERALPROBE I 32 km</b> mit 12 km MP am Stück – Block 1 bei 5:05–5:15 (HF-Deckel 145)</li><li>Mi 02.09.: TYP A 3×5 km – Schlüsseleinheit vor Bremen</li>"},
+ {n:"Bremen-Spezifik",w:3,det:"<b>W7–W9 · 17.08.–06.09. · alle Paces auf Zonen v3 umgestellt</b><li>Do 20.08.: TYP A 3×4 km @ 4:22–4:28 – erste lange Sub-Threshold-Einheit</li><li>Mi 26.08.: TYP B 5×2 km @ 3:55–4:05 (10 s/km langsamer als im alten Plan)</li><li>So 30.08.: <b>GENERALPROBE I 32 km</b> mit 12 km MP am Stück – Block 1 bei 5:05–5:15 (HF-Deckel 145)</li><li>Mi 02.09.: TYP A 4×5 km (Rep 4 gated) – Schlüsseleinheit vor Bremen</li>"},
  {n:"Bremen",w:1,det:"<b>W10 · Renn-Woche (geändert am 09.08.)</b><li>So 13.09.: <b>BREMEN als HALBMARATHON, all-out</b> – Ziel 1:28–1:31</li><li>Grund: 42,2 km auf dieser Basis hätten 2–3 Wochen Recovery gekostet; ein HM kostet 3–4 Tage</li><li>Zweck: flach + September = der saubere Eichpunkt, den der Europalauf bei 22 °C nicht liefern konnte</li>"},
  {n:"Rebuild",w:1,det:"<b>W11 · 14.–20.09. · aus Regeneration wird Training</b><li>Nach einem HM reichen 3–4 Tage statt 2–3 Wochen – das ist der eigentliche Gewinn der Bremen-Entscheidung</li><li>~75 km statt 26 km: Do TYP A 3×5, So 26er mit 2×6 @ MP</li>"},
  {n:"NYC-Block",w:4,det:"<b>W12–W15 · 21.09.–18.10. · Peak-Umfang 80–90 km</b><li>Mi 23.09.: <b>TYP E DAUER-DOPPEL 14 km + 5 min + 7 km</b> – die wichtigste neue Einheit</li><li><b>Mo 28.09.: TYP G · 3-STUNDEN-LAUF 34 km</b> mit 2×5 km @ MP – der einzige Lauf vor dem 11.10., der Renndauer erreicht</li><li>Sa/So 03.–04.10.: B2B 12 + 26 km auf müden Beinen</li><li>Mi 07.10.: TYP A maximal 4×5 km (20 km Qualität)</li><li>So 11.10.: <b>GENERALPROBE NYC 36 km mit 16 km MP am Stück</b> – muss liefern, was ein Rennen sonst beibringt</li>"},
@@ -867,10 +867,10 @@ const P=[
   ["Fr 28.08.","ED","AM <b>Easy 8 km + 6 Strides</b> · <b>PM Easy-Double 5 km</b> (HF &lt;140, ≥6 h Abstand) – <i>vom Donnerstag verschoben, PM spontan nach Gefühl</i> · <b>die Strides nicht vergessen</b>",0],
   ["Sa 29.08.","R","Ruhetag (zwingend – 32er am So)",0],
   ["So 30.08.","L","<b>GENERALPROBE I · 32 km: 20 km @ 5:05–5:15 (HF-Deckel 145) + 12 km @ MP 4:30–4:40</b> am Stück · <b>~2:38 h</b> · Race-Setup, welliges Profil · 75 g/h ≈ 200 g · <i>war 30 km mit 16 @ 5:10–5:20 – Block-1-Band am 23.08. auf die Werte vom 21./23.08. nachgezogen, +2 km komplett im lockeren Teil</i>",0]]},
- {w:"W9",dr:"31.08.–06.09.",km:"~85 km · Peak 1",days:[
+ {w:"W9",dr:"31.08.–06.09.",km:"~90 km · Peak 1",days:[
   ["Mo 31.08.","V","Recovery 10 km",0],
   ["Di 01.09.","G","<b>Gym (Kraft)</b> – einbeinig und exzentrisch: Step-downs, SL-RDL, Nordics, Wadenheben mit 3 s Ablassen · <b>kein Lauf</b>",0],
-  ["Mi 02.09.","K","<b>TYP A groß: 3×5 km @ 4:15–4:24</b> (90″) · HF 150–158 · ~19 km · lange Reps, letzter harter Reiz vor Bremen",0],
+  ["Mi 02.09.","K","<b>TYP A groß: 4×5 km @ 4:15–4:24</b> (90″) · HF 150–158 · ~24 km · letzter harter Reiz vor Bremen · <b style='color:var(--yellow)'>Rep 4 ist gated:</b> nur wenn Reps 1–3 im HF-Band 150–158 geblieben sind und Rep 3 nicht langsamer als 4:24 war – sonst bei drei Schluss · <i>war 3×5, auf Patricks Wunsch am 27.08. erweitert</i>",0],
   ["Do 03.09.","ED","AM Easy 14 km · <b>PM Easy-Double 6 km</b> (HF &lt;140, ≥6 h Abstand) · Ampel-gated",0],
   ["Fr 04.09.","E","Easy 10 km + Strides",0],
   ["Sa 05.09.","R","Ruhetag",0],
@@ -910,7 +910,7 @@ const P=[
  {w:"W14",dr:"05.–11.10.",km:"~84 km · GENERALPROBE NYC",days:[
   ["Mo 05.10.","V","Recovery 8 km",0],
   ["Di 06.10.","G","<b>Gym (Kraft)</b> – einbeinig und exzentrisch: Step-downs, SL-RDL, Nordics, Wadenheben mit 3 s Ablassen · <b>kein Lauf</b>",0],
-  ["Mi 07.10.","K","<b>TYP A maximal: 4×5 km @ 4:15–4:24</b> (90″) · ~24 km · 20 km Qualität",0],
+  ["Mi 07.10.","K","<b>TYP A: 4×5 km @ 4:15–4:24</b> (90″) · ~24 km · 20 km Qualität · <i>zweite Auflage nach dem 02.09., diesmal ungated</i>",0],
   ["Do 08.10.","E","Easy 8 km + <b>6×20 s Strides bergab</b>",0],
   ["Fr 09.10.","E","Easy 8 km + Strides",0],
   ["Sa 10.10.","R","Ruhetag (zwingend)",0],
