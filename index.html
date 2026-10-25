@@ -670,7 +670,7 @@ const days=[
  {d:"Do",dt:"22.10.",t:"R",tl:"REST",done:1,txt:"<b>Ruhetag</b> &middot; Chiropraktiker &middot; Recovery 65, HRV 71,7"},
  {d:"Fr",dt:"23.10.",t:"R",tl:"KRANK",done:1,txt:"<b>Noch verschleimt</b> &middot; Easy-Lauf ausgefallen &middot; <b style='color:var(--green)'>Recovery 89, HRV 81,2, RHR 43</b>"},
  {d:"Sa",dt:"24.10.",t:"R",tl:"REST",today:1,done:1,txt:"<b>Ruhetag</b> &middot; <b style='color:var(--green)'>Recovery 93, HRV 81,8</b> &middot; <b style='color:var(--yellow)'>RHR 46</b> &middot; Wiedereinstieg morgen nach Hals-Check"},
- {d:"So",dt:"25.10.",t:"L",tl:"LONG",txt:"<b>Fueling-Test 13 km</b> &middot; 10 km @ 5:20&ndash;5:35 + 3 km @ 4:50&ndash;4:55 &middot; nur wenn symptomfrei unterhalb des Halses"}
+ {d:"So",dt:"25.10.",t:"E",tl:"EASY",txt:"<b>Wiedereinstieg: kurzer Easy-Lauf</b> ~5&ndash;6 km &middot; HF unter 130 &middot; Fueling-Test entf&auml;llt"}
 ];
 $("days").innerHTML=days.map(x=>`
  <div class="dayrow ${x.done?'done':''} ${x.today&&!x.done?'today-hl':''}">
@@ -853,7 +853,7 @@ const calM=[
  {d:22,t:"R",rec:65,hrv:71.7,rhr:46,sl:95,st:1.8,run:"RUHETAG · Chiropraktiker (13:25-14:15) · Erkältung klingt ab · Morgenwerte: Recovery 65, HRV 71,7, RHR 46, Hauttemperatur 32,35 °C, Atemfrequenz 14,9 · Schlaf 95 % (8:54 h) · Strain 1,8"},
  {d:23,t:"R",rec:89,hrv:81.2,rhr:43,sl:88,st:1.4,run:"KRANK · noch verschleimt · Easy-Lauf mit Steigerungen ausgefallen · Morgenwerte: Recovery 89, HRV 81,2, RHR 43, Hauttemperatur 31,83 °C, Atemfrequenz 14,5 · Schlaf 88 % (8:42 h) · Strain 1,4"},
  {d:24,t:"R",today:1,rec:93,hrv:81.8,rhr:46,sl:97,st:2.7,run:"RUHETAG · Erkältung fast durch · Morgenwerte: Recovery 93, HRV 81,8, RHR 46 (gestern 43), Hauttemperatur 31,43 °C, Atemfrequenz 14,8, SpO2 99 % · Schlaf 97 % (8:59 h) · Strain 2,7 (Stand 10:00)"},
- {d:25,t:"L",plan:"13 km · LETZTER FUELING-TEST · 10 km @ 5:20–5:35 · 3 km @ 4:50–4:55 (HF 148–154) · komplettes Race-Kit, Alphafly, Frühstück und Gel-Protokoll exakt wie am 01.11."},
+ {d:25,t:"E",plan:"Wiedereinstieg: kurzer Easy-Lauf ~5–6 km, HF unter 130 · Fueling-Test entfällt (Erkältung)"},
  {d:26,t:"E",plan:"Easy 8 km mit 1 km @ MP oder leicht schneller (4:45–4:50) nach 2 km Einlaufen · Schlaf 1–2 h nach hinten schieben (Jetlag)"},
  {d:27,t:"V",plan:"Recovery 4 km"},
  {d:28,t:"K",plan:"Aktivierung 6 × 3 min @ HM-Pace 4:28–4:32 (2 min Trab) · ~9 km · HF-Deckel 160 · Ausweichvariante 4 × 1 km @ MP"},
@@ -1092,14 +1092,14 @@ const P=[
   ["Fr 16.10.","G","<b>Gym 1:30 h</b> (Schwerpunkt Beinkraft) &middot; <b style='color:var(--yellow)'>Stairmaster entfallen &ndash; w&auml;re zu viel gewesen</b> &middot; kein Lauf &middot; Whoop Kraft-Strain 15,5, &Oslash; HF 98 (max 148) &middot; Morgenwerte: Recovery 82, HRV 80,1, RHR 44, Schlaf 86 % + Nap 45 min",1],
   ["Sa 17.10.","R","<b>RUHETAG</b> &middot; zwei Spazierg&auml;nge &middot; <b style='color:var(--yellow)'>Morgenwerte nach dem Gym: Recovery 62, HRV 72,3, RHR 46</b> &middot; Schlaf 87 % (8:29 h, 16 St&ouml;rungen) &middot; Strain 4,0",1],
   ["So 18.10.","L","<b style='color:var(--green)'>ERLEDIGT &middot; LETZTER LONG RUN 25,5 km in 2:07:11</b> &middot; &Oslash; HF 149 (max 171) &middot; <b>4&times;2 km: 4:39 &middot; 4:36 &middot; 4:35 &middot; 4:33</b> (Plan 4:40), HF am Rep-Ende 152 &rarr; 159 &middot; Floats 5:17&ndash;5:28 &middot; <b>5&times;1 km: 4:18 &middot; 4:14 &middot; 4:10 &middot; 4:08 &middot; 3:50</b> (Plan 4:28&ndash;4:32), HF 160 &rarr; 167 &middot; <b style='color:var(--green)'>km 4&ndash;23 (20 km im Wechsel) &Oslash; 4:50,5 bei HF ~153 &ndash; Renn-Pace &uuml;ber 20 km</b> &middot; <b style='color:var(--green)'>1-km-Reps progressiv, zum Abschluss einmal &uuml;ber die HM-Schwelle (3:50, nicht all-out)</b> &middot; Whoop Strain 18,0 &middot; Morgenwerte: Recovery 65, HRV 73,7, RHR 45",1]]},
- {w:"W16",dr:"19.–25.10.",km:"Erkältung Mo–Sa · geplant ~40 km · Taper (−38 % gegen Ø 64) · 4×1 km Schwelle (Mi) · Fueling-Test 13 km (So)",days:[
+ {w:"W16",dr:"19.–25.10.",km:"Erkältung Mo–Sa · So kurzer Easy-Lauf zum Wiedereinstieg · geplant waren ~40 km",days:[
   ["Mo 19.10.","R","<b style='color:var(--yellow)'>KRANK &middot; Erk&auml;ltung beginnt</b> &middot; Recovery-Lauf ausgefallen &middot; Morgenwerte: Recovery 50, HRV 65,5, RHR 45 &middot; Strain 1,6",1],
   ["Di 20.10.","R","<b style='color:var(--yellow)'>KRANK &middot; Erk&auml;ltung, verschleimt</b> &middot; Gym ausgefallen &middot; Morgenwerte: Recovery 47, HRV 63,5, RHR 47, Atemfrequenz 15,9 &middot; Strain 3,6",1],
   ["Mi 21.10.","R","<b style='color:var(--yellow)'>KRANK</b> &middot; 4&times;1 km Schwelle ausgefallen &middot; Morgenwerte: Recovery 48, HRV 63,5, RHR 46, Hauttemperatur 33,16 &deg;C &middot; Strain 4,2",1],
   ["Do 22.10.","R","<b>Ruhetag komplett</b> &middot; Chiropraktiker &middot; Erk&auml;ltung klingt ab &middot; Morgenwerte: Recovery 65, HRV 71,7, RHR 46 &middot; Strain 1,8",1],
   ["Fr 23.10.","R","<b style='color:var(--yellow)'>Noch verschleimt</b> &middot; Easy-Lauf mit Steigerungen ausgefallen &middot; <b style='color:var(--green)'>Morgenwerte: Recovery 89, HRV 81,2, RHR 43</b> &middot; Strain 1,4",1],
   ["Sa 24.10.","R","<b>Ruhetag</b> &middot; <b style='color:var(--green)'>Recovery 93, HRV 81,8</b>, RHR 46, Schlaf 97 %",1],
-  ["So 25.10.","L","<b>13 km · LETZTER FUELING-TEST</b> · <b>10 km @ 5:20–5:35</b> · <b>3 km @ 4:50–4:55</b> (HF 148–154) · komplettes Race-Kit, Alphafly, Frühstück und Gel-Protokoll exakt wie am 01.11. · <b style='color:var(--yellow)'>Bewusst am langsamen Ende des MP-Bands und am Stück: sieben Tage vor dem Rennen ist nichts mehr zu gewinnen, aber Zuversicht zu verlieren. Die drei Kilometer sollen sich leicht anfühlen und mit dem Gefühl enden, dass mehr ginge</b> · <b style='color:var(--ink2)'>Taper-Revision 18.10.: von 16 auf 13 km, MP-Anteil von 4 auf 3 km</b>",0]]},
+  ["So 25.10.","E","<b>Wiedereinstieg: kurzer Easy-Lauf</b> (~5–6 km, locker, HF unter 130) · nur bei Symptomen oberhalb des Halses, ohne Fieber, Ruhepuls am Morgen höchstens 47 · <b style='color:var(--ink2)'>Fueling-Test 13 km entfällt (Erkältung, Entscheidung 24.10.)</b>",0]]},
  {w:"W17",dr:"26.10.–01.11.",km:"~26 + 42,2 km · NEW YORK · DEBÜT",days:[
   ["Mo 26.10.","E","<b>Easy 8 km mit 1 km @ MP oder leicht schneller</b> (4:45–4:50) direkt nach 2 km Einlaufen, danach locker · <b>Schlaf 1–2 h nach hinten schieben</b> (Jetlag)",0],
   ["Di 27.10.","V","<b>Recovery 4 km</b> (statt 6)",0],
